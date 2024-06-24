@@ -19,3 +19,7 @@ body {
     margin: auto;
     padding-top: 30px;
 }
+
+@media (max-width: 320px) {}
+
+@media (max-width: 414px) {}
