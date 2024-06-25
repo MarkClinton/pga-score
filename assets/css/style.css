@@ -3,7 +3,7 @@
 body {
     background-color: #009f6b;
     font-family: "Raleway", sans-serif;
-    color: #FAF9F6;
+    color: #383838;
 }
 
 .info-container {
@@ -22,7 +22,6 @@ body {
 }
 
 .about-container {
-    color: #FAF9F6;
     width: 90%;
     margin: 50px auto;
     text-align: center;
