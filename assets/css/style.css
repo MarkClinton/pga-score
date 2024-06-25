@@ -6,20 +6,40 @@ body {
     color: #445361;
 }
 
-.main-container {
-    height: 300px;
-    width: 100%;
+.info-container {
+    height: 100vh;
+    width: 30%;
     background-color: #009966;
 }
 
 .logo {
-    width: 150px;
-    height: 100px;
+    width: 120px;
+    height: 70px;
     display: block;
     margin: auto;
     padding-top: 30px;
 }
 
-@media (max-width: 320px) {}
+.about-container {
+    color: #FAF9F6;
+    width: 90%;
+    height: 250px;
+    margin: 50px auto;
+    text-align: center;
+}
 
-@media (max-width: 414px) {}
+@media (max-width: 320px) {
+    .info-container {
+        height: 320px;
+        width: 100%;
+        background-color: #009966;
+    }
+}
+
+@media (max-width: 992px) {
+    .info-container {
+        height: 400px;
+        width: 100%;
+        background-color: #009966;
+    }
+}
