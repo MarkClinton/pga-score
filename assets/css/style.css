@@ -70,8 +70,12 @@ body {
         padding-top: 10px;
     }
 
+    .about-container {
+        width: 50%;
+    }
+
     .course-about {
-        width: 70%;
+        width: 50%;
         margin: 10px 0 10px 0;
     }
 }
