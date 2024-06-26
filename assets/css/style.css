@@ -7,11 +7,14 @@ body {
     margin: 0;
 }
 
+.main-contain {
+    display: flex;
+}
+
 aside {
     height: 90vh;
     width: 30%;
     background-color: #009966;
-    padding-top: 75px;
     text-align: center;
 }
 
@@ -63,8 +66,17 @@ aside {
     border: 1px white;
 }
 
+.game-area {
+    background-color: #EA4D3D;
+    height: 90vh;
+    width: 70%;
+}
+
+.hidden {
+    display: none;
+}
+
 footer {
-    width: 30%;
     background-color: #009966;
     text-align: center;
     font-size: 30px;
