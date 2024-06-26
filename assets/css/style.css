@@ -4,10 +4,11 @@ body {
     background-color: #009f6b;
     font-family: "Raleway", sans-serif;
     color: #383838;
+    margin: 0;
 }
 
 .info-container {
-    height: 100vh;
+    height: 90vh;
     width: 30%;
     background-color: #009966;
     padding-top: 75px;
@@ -16,7 +17,7 @@ body {
 
 .logo {
     width: 140px;
-    height: 100px;
+    height: 90px;
 }
 
 .about-container {
@@ -60,6 +61,14 @@ body {
     text-decoration: none;
     margin: auto;
     border: 1px white;
+}
+
+footer {
+    width: 30%;
+    background-color: #009966;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
 }
 
 
