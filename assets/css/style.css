@@ -21,6 +21,14 @@ h4 {
     font-weight: 500;
 }
 
+p {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
