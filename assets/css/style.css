@@ -12,6 +12,15 @@ body {
     color: #383838;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
