@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #009f6b;
     font-family: "Raleway", sans-serif;
     color: #383838;
-    margin: 0;
+}
+
+main {
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-contain {
@@ -32,7 +44,6 @@ aside {
 .course-container {
     width: 100%;
     height: 320px;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,7 +62,7 @@ aside {
 }
 
 .hard-difficulty {
-    background-color: #EA4D3D;
+    background-color: #F6CE46;
 }
 
 .btn {
@@ -79,14 +90,14 @@ footer {
     background-color: #009966;
     text-align: center;
     font-size: 30px;
-    padding: 10px 0;
     height: 3vh;
+    width: 100%;
 }
 
 
 
 @media (max-width: 320px) {
-    .info-container {
+    aside {
         height: 320px;
         width: 100%;
         background-color: #009966;
@@ -94,19 +105,31 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .info-container {
+
+    .main-contain {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    aside {
         height: auto;
         width: 100%;
         background-color: #009966;
-        padding-top: 10px;
+
+    }
+
+    .course-container {
+        flex-direction: row;
+        height: auto;
     }
 
     .about-container {
-        width: 50%;
+        width: 80%;
+        margin-bottom: 0;
     }
 
     .course-about {
-        width: 50%;
+        width: 45%;
         margin: 10px 0 10px 0;
     }
 }
