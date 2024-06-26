@@ -12,7 +12,7 @@ body {
 }
 
 aside {
-    height: 90vh;
+    height: 96vh;
     width: 30%;
     background-color: #009966;
     text-align: center;
@@ -68,7 +68,7 @@ aside {
 
 .game-area {
     background-color: #EA4D3D;
-    height: 90vh;
+    height: 96vh;
     width: 70%;
 }
 
@@ -81,6 +81,7 @@ footer {
     text-align: center;
     font-size: 30px;
     padding: 10px 0;
+    height: 3vh;
 }
 
 
