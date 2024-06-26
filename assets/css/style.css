@@ -94,20 +94,10 @@ footer {
     width: 100%;
 }
 
-
-
-@media (max-width: 320px) {
-    aside {
-        height: 320px;
-        width: 100%;
-        background-color: #009966;
-    }
-}
-
 @media (max-width: 992px) {
 
     .main-contain {
-        width: 90%;
+        width: 100%;
         flex-direction: column;
     }
 
@@ -115,21 +105,40 @@ footer {
         height: auto;
         width: 100%;
         background-color: #009966;
-
     }
 
     .course-container {
         flex-direction: row;
+        justify-content: space-evenly;
         height: auto;
     }
 
     .about-container {
-        width: 80%;
+        width: 60%;
         margin-bottom: 0;
     }
 
     .course-about {
-        width: 45%;
+        width: 40%;
+        height: auto;
         margin: 10px 0 10px 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .course-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .course-about {
+        width: 70%;
+    }
+
+    .about-container {
+        width: 70%;
     }
 }
