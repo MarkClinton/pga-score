@@ -1,4 +1,7 @@
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
 
 * {
     padding: 0;
@@ -30,6 +33,7 @@ p {
     margin: 5px 0 5px 0;
 }
 
+/* Header */
 header {
     background-color: #009966;
     padding: 0 1rem;
@@ -39,6 +43,13 @@ header {
     justify-content: center;
 }
 
+.logo {
+    width: 140px;
+    height: 90px;
+    margin-top: 25px;
+}
+
+/* Main content */
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
@@ -56,12 +67,6 @@ aside {
     width: 30%;
     background-color: #009966;
     text-align: center;
-}
-
-.logo {
-    width: 140px;
-    height: 90px;
-    margin-top: 25px;
 }
 
 .about-container {
@@ -116,6 +121,7 @@ aside {
     display: none;
 }
 
+/* Footer content*/
 footer {
     background-color: #009966;
     text-align: center;
@@ -127,6 +133,7 @@ footer {
     align-items: center;
 }
 
+/* Media query: screens less than 992px */
 @media (max-width: 992px) {
 
     header {
@@ -167,6 +174,7 @@ footer {
     }
 }
 
+/* Media query: screens less than 768px */
 @media (max-width: 768px) {
 
     .course-container {
