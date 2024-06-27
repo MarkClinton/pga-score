@@ -39,12 +39,12 @@ p {
 /* Header */
 header {
     background-color: #009966;
-    padding: 0 1rem;
     height: 15vh;
     min-height: 120px;
     width: 30%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .logo {
