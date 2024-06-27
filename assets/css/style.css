@@ -37,6 +37,11 @@ p {
     margin: 5px 0 5px 0;
 }
 
+a {
+    text-decoration: none;
+    color: #383838;
+}
+
 /* Header */
 header {
     background-color: #009966;
