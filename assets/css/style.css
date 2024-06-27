@@ -100,6 +100,7 @@ aside {
     padding: 10px;
     border-radius: 5px;
     text-align: center;
+    box-shadow: -2px 5px 10px 0px #383838;
 }
 
 .easy-difficulty {
@@ -127,6 +128,11 @@ aside {
     background: #43BB45;
     text-decoration: none;
     cursor: pointer;
+}
+
+.btn:active {
+    position: relative;
+    top: 2px;
 }
 
 .game-area {
