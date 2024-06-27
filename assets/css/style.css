@@ -106,15 +106,21 @@ aside {
 }
 
 .btn {
-    border-radius: 10px;
-    font-family: "Raleway", sans-serif;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
     color: #ffffff;
-    font-size: 20px;
+    font-size: medium;
+    font-weight: 500;
     background: #64C466;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    margin: auto;
-    border: 1px white;
+    border: 1px solid #009f6b;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: #4ebe4f;
+    text-decoration: none;
 }
 
 .game-area {
