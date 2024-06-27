@@ -124,8 +124,9 @@ aside {
 }
 
 .btn:hover {
-    background: #4ebe4f;
+    background: #43BB45;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .game-area {
