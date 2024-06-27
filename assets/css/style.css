@@ -135,8 +135,17 @@ aside {
     top: 2px;
 }
 
+.game-contain {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .game-area {
-    width: 70%;
+    width: 840px;
+    height: 840px;
+    background-color: #8CE1CF;
 }
 
 .hidden {
