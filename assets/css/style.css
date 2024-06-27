@@ -73,6 +73,7 @@ main {
 
 aside {
     width: 30%;
+    min-width: 30%;
     background-color: #009966;
     text-align: center;
 }
@@ -139,7 +140,6 @@ aside {
     display: flex;
     flex: 1 0 auto;
     justify-content: center;
-    align-items: center;
 }
 
 .game-area {
