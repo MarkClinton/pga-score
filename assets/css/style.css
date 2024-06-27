@@ -13,6 +13,9 @@ body {
     background-color: #009f6b;
     font-family: "Raleway", sans-serif;
     color: #383838;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -55,13 +58,11 @@ main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
     display: flex;
-    flex-direction: column;
 }
 
 .main-contain {
     display: flex;
-    height: 80vh;
-    min-height: 830px;
+    width: 100%;
 }
 
 aside {
