@@ -36,6 +36,12 @@ function startGame() {
 function addElementsToGameArea() {
 
     let cards = getPlayingCards();
+    // Remove the first element of the array and save it to a variable
+    // First element is the back of card content and is only needed once.
+    // Its not needed when looping through card array.
+    let suit = cards.shift();
+    console.log(suit);
+    console.log(cards[0].src);
 
     const [card, frontCard, backCard] = createElementsForGameArea();
 
