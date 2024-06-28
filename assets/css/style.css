@@ -147,6 +147,9 @@ aside {
     height: 840px;
     background-color: #009966;
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -156,6 +159,11 @@ aside {
     background-color: #163B7C;
     transform-style: preserve-3d;
     transition: transform 0.8s;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform .3s;
 }
 
 .flip {
