@@ -39,16 +39,16 @@ function addElementsToGameArea() {
     // Remove the first element of the array and save it to a variable
     // First element is the back of card content and is only needed once.
     // Its not needed when looping through card array.
-    let suit = cards.shift();
-    console.log(suit);
+    let backOfCardContent = cards.shift();
+    console.log(backOfCardContent);
     console.log(cards[0].src);
 
-    const [card, frontCard, backCard] = createElementsForGameArea();
+    const [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
 
     const gameArea = document.getElementsByClassName("game-area");
-    const append = gameArea[0].appendChild(card.cloneNode());
-    append.appendChild(frontCard.cloneNode());
-    append.appendChild(backCard.cloneNode());
+    const append = gameArea[0].appendChild(cardElement.cloneNode());
+    append.appendChild(frontOfCard.cloneNode());
+    append.appendChild(backOfCard.cloneNode());
     // append.addEventListener('click', flipCard);
 }
 
@@ -84,15 +84,15 @@ function createElementsForGameArea() {
 
     // Create new img element for front of
     // card content to be placed inside the card div
-    let frontOfCardContent = document.createElement("img");
+    let frontOfCard = document.createElement("img");
     // Add the front-face class to the img
-    frontOfCardContent.classList.add("front-face");
+    frontOfCard.classList.add("front-face");
 
     // Create new img element for back of
     // card content to be placed inside the card div
-    let backOfCardContent = document.createElement("img");
+    let backOfCard = document.createElement("img");
     // Add the back-face class to the img
-    backOfCardContent.classList.add("back-face");
+    backOfCard.classList.add("back-face");
 
-    return [createCardDiv, frontOfCardContent, backOfCardContent]
+    return [createCardDiv, frontOfCard, backOfCard]
 }
