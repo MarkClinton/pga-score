@@ -24,12 +24,20 @@ function startModal() {
 
 function startGame() {
 
-    let cards = getPlayingCards();
-    let elements = createElementsForGameArea();
-    let gameArea = document.getElementsByClassName("game-area");
-    let append = gameArea[0].appendChild(elements[0].cloneNode());
-    console.log(append);
+    addElementsToGameArea();
 
+}
+
+function addElementsToGameArea() {
+
+    let cards = getPlayingCards();
+
+    const [card, frontCard, backCard] = createElementsForGameArea();
+
+    const gameArea = document.getElementsByClassName("game-area");
+    const append = gameArea[0].appendChild(card.cloneNode());
+    append.appendChild(frontCard.cloneNode());
+    append.appendChild(backCard.cloneNode());
 }
 
 function getPlayingCards() {
@@ -72,7 +80,7 @@ function createElementsForGameArea() {
     // Add the back-face class to the img
     backOfCardContent.classList.add("back-face");
     // Add src of img
-    backOfCardContent.src = "cardFace";
+    // backOfCardContent.src = "cardFace";
 
     return [createCardDiv, frontOfCardContent, backOfCardContent]
 }
