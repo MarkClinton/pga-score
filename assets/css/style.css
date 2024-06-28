@@ -148,14 +148,16 @@ aside {
     background-color: #009966;
     perspective: 1000px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .card {
     position: relative;
     height: 265px;
+    /* calc width to ensure they all fit on the board horizontally */
     width: calc(25% - 10px);
+    margin: 1px;
     background-color: #163B7C;
     transform-style: preserve-3d;
     transition: transform 0.8s;
