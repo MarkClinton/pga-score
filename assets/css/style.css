@@ -148,6 +148,19 @@ aside {
     background-color: #009966;
 }
 
+.card {
+    position: relative;
+    height: 265px;
+    width: calc(25% - 10px);
+    background-color: #163B7C;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
 .hidden {
     display: none;
 }
