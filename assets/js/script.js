@@ -4,7 +4,11 @@
  */
 window.addEventListener('load', function () {
     let startGameBtn = document.getElementById('start-game-btn');
-    startGameBtn.addEventListener('click', startGame);
+    startGameBtn.addEventListener('click', startModal);
+
+    let closeModalPopup = document.getElementsByClassName("modal-close")[0];
+    closeModalPopup.addEventListener('click', closeModal);
+
 });
 
 function flipCard() {
@@ -16,8 +20,23 @@ function flipCard() {
  * details from the user before playing.
  */
 function startModal() {
-    alert("Hello");
+
+    let modal = document.getElementById("gameDetailsModal");
+    modal.style.display = "block";
+
+    // When the user clicks anywhere outside of the modal, close it.
+    // Defined here as the modal is displayed.
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 };
+
+function closeModal() {
+    let modal = document.getElementById("gameDetailsModal");
+    modal.style.display = "none";
+}
 
 function startGame() {
 
