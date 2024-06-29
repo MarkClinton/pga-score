@@ -56,7 +56,7 @@ function submitGameDetails(event) {
     const gameMode = this.course.value;
 
     clearGameArea();
-    startGame(gameMode);
+    addElementsToGameArea(gameMode);
     closeModal();
 };
 
@@ -65,10 +65,6 @@ function submitGameDetails(event) {
  */
 function flipCard() {
     this.classList.toggle('flip');
-};
-
-function startGame(gameMode) {
-    addElementsToGameArea(gameMode);
 };
 
 /**

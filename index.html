@@ -66,13 +66,14 @@
         <div id="gameDetailsModal" class="popup-modal">
             <div class="popup-modal-content">
                 <span class="modal-close">&times;</span>
-                <h2>Get your clubs ready...</h2>
+                <h2>Get your clubs ready.</h2>
                 <p>Enter your name and course you wish to play.</p>
 
                 <form id="UserGameDetails" class="UserGameDetails" target="_self">
                     <label for="name">
                         <p>Name</p>
-                        <input type="text" class="form-input" id="name" name="name" maxlength="15" required>
+                        <input type="text" class="form-input" id="name" name="name" minlength="3" maxlength="15"
+                            required>
                     </label><br>
                     <label for="course">
                         <p>Course</p>
