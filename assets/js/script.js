@@ -1,3 +1,4 @@
+// Declaring a 'namespace' to reduce the global scope of variables.
 let CARD_IDENTIFIERS = {
     isCardFlipped: false,
     lockCardFlip: false,
@@ -95,6 +96,9 @@ function flipCard() {
     checkCardsMatch();
 };
 
+/**
+ * 
+ */
 function checkCardsMatch() {
     let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card ===
         CARD_IDENTIFIERS.secondCard.dataset.card;
@@ -108,20 +112,27 @@ function checkCardsMatch() {
             resetCards();
         }, 1000);
     }
-}
+};
 
+/**
+ * 
+ * 
+ */
 function disableCards() {
     CARD_IDENTIFIERS.firstCard.removeEventListener('click', flipCard);
     CARD_IDENTIFIERS.secondCard.removeEventListener('click', flipCard);
     resetCards();
-}
+};
 
+/**
+ * 
+ */
 function resetCards() {
     CARD_IDENTIFIERS.firstCard = null;
     CARD_IDENTIFIERS.secondCard = null;
     CARD_IDENTIFIERS.isCardFlipped = false;
     CARD_IDENTIFIERS.lockCardFlip = false;
-}
+};
 
 
 /**
