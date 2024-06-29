@@ -49,16 +49,23 @@ function submitGameDetails(event) {
     event.preventDefault();
 
     const user = this.name.value;
-    let userDisplay = document.getElementsByClassName('userDisplay')[0];
-    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
-    userDisplay.style.display = "block";
-
     const gameMode = this.course.value;
 
     clearGameArea();
+    setUserDisplayName(user);
     addElementsToGameArea(gameMode);
     closeModal();
 };
+
+/**
+ * Sets the users name above the game area
+ * @param {*} user 
+ */
+function setUserDisplayName(user) {
+    let userDisplay = document.getElementsByClassName('userDisplay')[0];
+    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
+    userDisplay.style.display = "block";
+}
 
 /**
  * Toggles the class 'flip' for a card
@@ -115,6 +122,7 @@ function addElementsToGameArea(gameMode) {
  * Function to clear all dynamically created elements from the game area
  */
 function clearGameArea() {
+    document.getElementById("name").value = "";
     document.getElementsByClassName("game-area")[0].innerHTML = "";
 };
 
