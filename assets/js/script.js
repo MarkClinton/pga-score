@@ -67,8 +67,7 @@ function flipCard() {
 };
 
 function startGame(gameMode) {
-
-    addElementsToGameArea();
+    addElementsToGameArea(gameMode);
 };
 
 /**
@@ -76,7 +75,7 @@ function startGame(gameMode) {
  * Loops through the cards and give value to created elements
  * appends elements to the DOM
  */
-function addElementsToGameArea() {
+function addElementsToGameArea(gameMode) {
 
     const gameArea = document.getElementsByClassName("game-area")[0];
     let [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
@@ -86,6 +85,10 @@ function addElementsToGameArea() {
     // First element is the back of card content and is only needed once.
     // Its not needed when looping through card array.
     const backOfCardContent = playingCards.shift();
+
+    // Take the number of cards to display from the the gameMode.
+    // gameMode will be a number
+    playingCards.splice(gameMode);
 
     // Duplicate the array and overwrite the original. Means we now append 2
     // of each card to the game area.
