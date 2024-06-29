@@ -83,6 +83,26 @@ function getPlayingCards() {
             src: "assets/images/golfers/robert_macintyre.png",
             data: "macintyre",
             alt: "Robert MacIntyre"
+        },
+        {
+            src: "assets/images/golfers/rory_mcilroy.png",
+            data: "mcilroy",
+            alt: "Rory McIlroy"
+        },
+        {
+            src: "assets/images/golfers/sahith_theegala.png",
+            data: "theegala",
+            alt: "Sahith Theegala"
+        },
+        {
+            src: "assets/images/golfers/shane_lowry.png",
+            data: "lowry",
+            alt: "Shane Lowry"
+        },
+        {
+            src: "assets/images/golfers/tiger_woods.png",
+            data: "woods",
+            alt: "Tiger Woods"
         }
     ];
     return listOfCards;
