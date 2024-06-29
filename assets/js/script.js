@@ -1,8 +1,8 @@
 let CARD_IDENTIFIERS = {
     isCardFlipped: false,
     lockCardFlip: false,
-    firstCard: "",
-    secondCard: ""
+    firstCard: null,
+    secondCard: null
 };
 
 /**
@@ -78,7 +78,7 @@ function setUserDisplayName(user) {
  * Toggles the class 'flip' for a card
  */
 function flipCard() {
-
+    console.log("We still flipping")
     if (CARD_IDENTIFIERS.lockCardFlip) return;
     if (this === CARD_IDENTIFIERS.firstCard) return;
 
@@ -101,14 +101,38 @@ function flipCard() {
 };
 
 function checkCardsMatch() {
-    let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card === CARD_IDENTIFIERS.secondCard.dataset.card;
+    let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card ===
+        CARD_IDENTIFIERS.secondCard.dataset.card;
     console.log(isMatch);
-    alert("Checking...")
+    if (isMatch) {
+        setTimeout(() => {
+            alert("Its a match");
+        }, 1000);
+        disableCards();
+    } else {
+        setTimeout(() => {
+            console.log("Oops, not a match!");
+            CARD_IDENTIFIERS.firstCard.classList.remove('flip');
+            CARD_IDENTIFIERS.secondCard.classList.remove('flip');
+            resetCards();
+        }, 1200);
+    }
+    console.log(CARD_IDENTIFIERS);
 }
 
-function disableCards() {}
+function disableCards() {
+    CARD_IDENTIFIERS.firstCard.removeEventListener('click', flipCard);
+    CARD_IDENTIFIERS.secondCard.removeEventListener('click', flipCard);
+    console.log("we did it")
+    resetCards();
+}
 
-function resetCards() {}
+function resetCards() {
+    CARD_IDENTIFIERS.firstCard = null;
+    CARD_IDENTIFIERS.secondCard = null;
+    CARD_IDENTIFIERS.isCardFlipped = false;
+    CARD_IDENTIFIERS.lockCardFlip = false;
+}
 
 
 /**
@@ -148,7 +172,7 @@ function addElementsToGameArea(gameMode) {
         cardElement.style.order = ramdomCardPosition;
 
         // Append the elements to the game-area 
-        const append = gameArea.appendChild(cardElement.cloneNode());
+        let append = gameArea.appendChild(cardElement.cloneNode());
         append.appendChild(frontOfCard.cloneNode());
         append.appendChild(backOfCard.cloneNode());
         append.addEventListener('click', flipCard);
