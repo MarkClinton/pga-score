@@ -38,8 +38,8 @@ function showModal() {
         if (event.target === modal) {
             modal.style.display = "none";
         }
-    }
-};
+    };
+}
 
 /**
  * Fires from an EventListener to remove the modal from screen
@@ -47,7 +47,7 @@ function showModal() {
 function closeModal() {
     let modal = document.getElementById("gameDetailsModal");
     modal.style.display = "none";
-};
+}
 
 /**
  * Handles the user input to start the game
@@ -63,7 +63,7 @@ function submitGameDetails(event) {
     setUserDisplayName(user);
     addElementsToGameArea(gameMode);
     closeModal();
-};
+}
 
 /**
  * Sets the users name above the game area
@@ -73,7 +73,7 @@ function setUserDisplayName(user) {
     let userDisplay = document.getElementsByClassName('userDisplay')[0];
     userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
     userDisplay.style.display = "block";
-};
+}
 
 /**
  * Toggles the class 'flip' for a card
@@ -88,13 +88,13 @@ function flipCard() {
         CARD_IDENTIFIERS.firstCard = this;
         CARD_IDENTIFIERS.isCardFlipped = true;
         return;
-    };
+    }
 
     CARD_IDENTIFIERS.secondCard = this;
     CARD_IDENTIFIERS.lockCardFlip = true;
 
     checkCardsMatch();
-};
+}
 
 /**
  * 
@@ -113,7 +113,7 @@ function checkCardsMatch() {
             resetCards();
         }, 1000);
     }
-};
+}
 
 /**
  * 
@@ -123,7 +123,7 @@ function disableCards() {
     CARD_IDENTIFIERS.firstCard.removeEventListener('click', flipCard);
     CARD_IDENTIFIERS.secondCard.removeEventListener('click', flipCard);
     resetCards();
-};
+}
 
 /**
  * 
@@ -133,7 +133,7 @@ function resetCards() {
     CARD_IDENTIFIERS.secondCard = null;
     CARD_IDENTIFIERS.isCardFlipped = false;
     CARD_IDENTIFIERS.lockCardFlip = false;
-};
+}
 
 /**
  * Check if cards with the flip are the same number as cards displayed
@@ -192,7 +192,7 @@ function addElementsToGameArea(gameMode) {
         append.appendChild(backOfCard.cloneNode());
         append.addEventListener('click', flipCard);
     }
-};
+}
 
 /**
  * Function to clear all dynamically created elements from the game area
@@ -200,7 +200,7 @@ function addElementsToGameArea(gameMode) {
 function clearGameArea() {
     document.getElementById("name").value = "";
     document.getElementsByClassName("game-area")[0].innerHTML = "";
-};
+}
 
 /**
  * Define an array of objects that contains card details
@@ -244,7 +244,7 @@ function getPlayingCards() {
         }
     ];
     return listOfCards;
-};
+}
 
 /**
  * Define all the elements that are going to be placed on the DOM
@@ -269,5 +269,5 @@ function createElementsForGameArea() {
     // Add the back-face class to the img
     backOfCard.classList.add("back-face");
 
-    return [createCardDiv, frontOfCard, backOfCard]
-};
+    return [createCardDiv, frontOfCard, backOfCard];
+}

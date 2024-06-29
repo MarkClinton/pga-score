@@ -70,7 +70,7 @@
 
 - ### Compatibility Testing
 
-
+## Bugs
 
 ## Credits
 
@@ -86,4 +86,4 @@
 - ### Acknowledgments 
 
 
-## Bugs
+
