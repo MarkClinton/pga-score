@@ -1,3 +1,10 @@
+let CARD_IDENTIFIERS = {
+    isCardFlipped: false,
+    lockCardFlip: false,
+    firstCard: "",
+    secondCard: ""
+};
+
 /**
  * Wait for the DOM to finish loading before running the game.
  * get the button element and add eventListeners to it.
@@ -65,14 +72,44 @@ function setUserDisplayName(user) {
     let userDisplay = document.getElementsByClassName('userDisplay')[0];
     userDisplay.innerHTML = `<p>Player: ${user}</p>`;
     userDisplay.style.display = "block";
-}
+};
 
 /**
  * Toggles the class 'flip' for a card
  */
 function flipCard() {
+
+    if (CARD_IDENTIFIERS.lockCardFlip) return;
+    if (this === CARD_IDENTIFIERS.firstCard) return;
+
     this.classList.toggle('flip');
+
+    if (!CARD_IDENTIFIERS.isCardFlipped) {
+        CARD_IDENTIFIERS.firstCard = this;
+        CARD_IDENTIFIERS.isCardFlipped = true;
+        return;
+    };
+
+    CARD_IDENTIFIERS.secondCard = this;
+    CARD_IDENTIFIERS.lockCardFlip = true;
+
+    checkCardsMatch();
+
+    console.log(CARD_IDENTIFIERS);
+
+
 };
+
+function checkCardsMatch() {
+    let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card === CARD_IDENTIFIERS.secondCard.dataset.card;
+    console.log(isMatch);
+    alert("Checking...")
+}
+
+function disableCards() {}
+
+function resetCards() {}
+
 
 /**
  * Gathers all the elements and cards in one place. 
