@@ -25,6 +25,7 @@ function handleSubmitGameDetails(event) {
 
     const gameMode = this.course.value;
 
+    clearGameArea();
     startGame(gameMode);
     closeModal();
 }
@@ -33,12 +34,17 @@ function flipCard() {
     this.classList.toggle('flip');
 }
 
+function clearGameArea() {
+    document.getElementsByClassName("game-area")[0].innerHTML = "";
+}
+
 /**
  * The beginning of the game. Function to display a popup modal to capture
  * details from the user before playing.
  */
 function startModal() {
-
+    // Reset the name input
+    document.getElementById("name").value = "";
     let modal = document.getElementById("gameDetailsModal");
     modal.style.display = "block";
 
