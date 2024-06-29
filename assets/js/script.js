@@ -15,6 +15,10 @@ window.addEventListener('load', function () {
 
 });
 
+/**
+ * Handles the user input to start the game
+ * @param {*} event 
+ */
 function handleSubmitGameDetails(event) {
     event.preventDefault();
 
@@ -30,10 +34,16 @@ function handleSubmitGameDetails(event) {
     closeModal();
 }
 
+/**
+ * Toggles the class 'flip' for a card
+ */
 function flipCard() {
     this.classList.toggle('flip');
 }
 
+/**
+ * Function to clear all dynamically created elements from the game area
+ */
 function clearGameArea() {
     document.getElementsByClassName("game-area")[0].innerHTML = "";
 }
