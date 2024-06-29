@@ -51,11 +51,12 @@
                         </p>
                     </section>
                 </div>
-                <button class="btn" id="start-game-btn">Lets Play!</button>
+                <button class="btn" id="start-game-btn">Start Game</button>
             </aside>
 
             <section class="game-contain">
                 <h2 class="hidden">Game area</h2>
+                <div class="userDisplay"></div>
                 <div class="game-area">
 
                 </div>
@@ -65,17 +66,27 @@
         <div id="gameDetailsModal" class="popup-modal">
             <div class="popup-modal-content">
                 <span class="modal-close">&times;</span>
-                <h2>Getting your clubs ready...</h2>
+                <h2>Get your clubs ready...</h2>
                 <p>Enter your name and course you wish to play.</p>
 
-                <form id="UserGameDetails" target="_self">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br>
-
-                    <label for="course">Course:</label>
-                    <input type="text" id="course" name="course"><br>
-
-                    <input type="submit" value="Submit">
+                <form id="UserGameDetails" class="UserGameDetails" target="_self">
+                    <label for="name">
+                        <p>Name</p>
+                        <input type="text" class="form-input" id="name" name="name" maxlength="15" required>
+                    </label><br>
+                    <label for="course">
+                        <p>Course</p>
+                        <select class="form-input" id="course" required>
+                            <option value="8">
+                                <p>The K Club (Easy)</p>
+                            </option>
+                            <option value="12">
+                                <p>Augusta (Hard)</p>
+                            </option>
+                        </select>
+                    </label>
+                    <br>
+                    <input type="submit" class="btn margin-top" value="Lets Play">
                 </form>
             </div>
         </div>

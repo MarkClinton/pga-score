@@ -17,8 +17,16 @@ window.addEventListener('load', function () {
 
 function handleSubmitGameDetails(event) {
     event.preventDefault();
-    console.log(this.name.value);
-    console.log(this.course.value);
+
+    const user = this.name.value;
+    let userDisplay = document.getElementsByClassName('userDisplay')[0];
+    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
+    userDisplay.style.display = "block";
+
+    const gameMode = this.course.value;
+
+    startGame(gameMode);
+    closeModal();
 }
 
 function flipCard() {
@@ -51,7 +59,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-function startGame() {
+function startGame(gameMode) {
 
     addElementsToGameArea();
 
