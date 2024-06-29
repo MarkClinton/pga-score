@@ -35,21 +35,27 @@ function startGame() {
  */
 function addElementsToGameArea() {
 
-    let cards = getPlayingCards();
+    const gameArea = document.getElementsByClassName("game-area")[0];
+    let [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
+    const playingCards = getPlayingCards();
+
     // Remove the first element of the array and save it to a variable
     // First element is the back of card content and is only needed once.
     // Its not needed when looping through card array.
-    let backOfCardContent = cards.shift();
-    console.log(backOfCardContent);
-    console.log(cards[0].src);
+    let backOfCardContent = playingCards.shift();
 
-    const [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
+    for (let c of playingCards) {
+        console.log(c);
 
-    const gameArea = document.getElementsByClassName("game-area");
-    const append = gameArea[0].appendChild(cardElement.cloneNode());
-    append.appendChild(frontOfCard.cloneNode());
-    append.appendChild(backOfCard.cloneNode());
-    // append.addEventListener('click', flipCard);
+        cardElement.dataset.card = c.data;
+        frontOfCard.src = c.src;
+        backOfCard.src = backOfCardContent.src;
+
+        const append = gameArea.appendChild(cardElement.cloneNode());
+        append.appendChild(frontOfCard.cloneNode());
+        append.appendChild(backOfCard.cloneNode());
+        append.addEventListener('click', flipCard);
+    }
 }
 
 /**
@@ -66,6 +72,11 @@ function getPlayingCards() {
             src: "assets/images/golfers/john_daly.png",
             data: "daly",
             alt: "John Daly"
+        },
+        {
+            src: "assets/images/golfers/robert_macintyre.png",
+            data: "macintyre",
+            alt: "Robert MacIntyre"
         }
     ];
     return listOfCards;
