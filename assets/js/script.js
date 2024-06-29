@@ -51,6 +51,12 @@ function addElementsToGameArea() {
         frontOfCard.src = c.src;
         backOfCard.src = backOfCardContent.src;
 
+        // Generate random number between 1 and the length of the object. Ideally. 
+        // Currently its set to 12 and needs to be refactored. 
+        let ramdomCardPosition = Math.floor(Math.random() * 12);
+        // Give the card div a flex order style with that random number
+        cardElement.style.order = ramdomCardPosition;
+
         const append = gameArea.appendChild(cardElement.cloneNode());
         append.appendChild(frontOfCard.cloneNode());
         append.appendChild(backOfCard.cloneNode());
