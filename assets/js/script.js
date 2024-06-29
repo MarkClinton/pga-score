@@ -16,39 +16,6 @@ window.addEventListener('load', function () {
 });
 
 /**
- * Handles the user input to start the game
- * @param {*} event 
- */
-function handleSubmitGameDetails(event) {
-    event.preventDefault();
-
-    const user = this.name.value;
-    let userDisplay = document.getElementsByClassName('userDisplay')[0];
-    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
-    userDisplay.style.display = "block";
-
-    const gameMode = this.course.value;
-
-    clearGameArea();
-    startGame(gameMode);
-    closeModal();
-}
-
-/**
- * Toggles the class 'flip' for a card
- */
-function flipCard() {
-    this.classList.toggle('flip');
-}
-
-/**
- * Function to clear all dynamically created elements from the game area
- */
-function clearGameArea() {
-    document.getElementsByClassName("game-area")[0].innerHTML = "";
-}
-
-/**
  * The beginning of the game. Function to display a popup modal to capture
  * details from the user before playing.
  */
@@ -73,13 +40,38 @@ function startModal() {
 function closeModal() {
     let modal = document.getElementById("gameDetailsModal");
     modal.style.display = "none";
-}
+};
+
+/**
+ * Handles the user input to start the game
+ * @param {*} event 
+ */
+function handleSubmitGameDetails(event) {
+    event.preventDefault();
+
+    const user = this.name.value;
+    let userDisplay = document.getElementsByClassName('userDisplay')[0];
+    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
+    userDisplay.style.display = "block";
+
+    const gameMode = this.course.value;
+
+    clearGameArea();
+    startGame(gameMode);
+    closeModal();
+};
+
+/**
+ * Toggles the class 'flip' for a card
+ */
+function flipCard() {
+    this.classList.toggle('flip');
+};
 
 function startGame(gameMode) {
 
     addElementsToGameArea();
-
-}
+};
 
 /**
  * Gathers all the elements and cards in one place. 
@@ -119,7 +111,14 @@ function addElementsToGameArea() {
         append.appendChild(backOfCard.cloneNode());
         append.addEventListener('click', flipCard);
     }
-}
+};
+
+/**
+ * Function to clear all dynamically created elements from the game area
+ */
+function clearGameArea() {
+    document.getElementsByClassName("game-area")[0].innerHTML = "";
+};
 
 /**
  * Define an array of objects that contains card details
@@ -163,7 +162,7 @@ function getPlayingCards() {
         }
     ];
     return listOfCards;
-}
+};
 
 /**
  * Define all the elements that are going to be placed on the DOM
@@ -189,4 +188,4 @@ function createElementsForGameArea() {
     backOfCard.classList.add("back-face");
 
     return [createCardDiv, frontOfCard, backOfCard]
-}
+};
