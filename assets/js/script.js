@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
     closeModalPopup.addEventListener('click', closeModal);
 
     let form = this.document.getElementById('UserGameDetails');
-    form.addEventListener('submit', handleSubmitGameDetails);
+    form.addEventListener('submit', submitGameDetails);
 });
 
 /**
@@ -20,6 +20,7 @@ window.addEventListener('load', function () {
 function showModal() {
     // Reset the name input
     document.getElementById("name").value = "";
+
     let modal = document.getElementById("gameDetailsModal");
     modal.style.display = "block";
 
@@ -44,7 +45,7 @@ function closeModal() {
  * Handles the user input to start the game
  * @param {*} event 
  */
-function handleSubmitGameDetails(event) {
+function submitGameDetails(event) {
     event.preventDefault();
 
     const user = this.name.value;
