@@ -7,9 +7,6 @@ window.addEventListener('load', function () {
     startGameBtn.addEventListener('click', startGame);
 });
 
-const card = document.getElementsByClassName('card');
-card[0].addEventListener('click', flipCard);
-
 function flipCard() {
     this.classList.toggle('flip');
 }
