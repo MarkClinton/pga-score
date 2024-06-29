@@ -4,22 +4,20 @@
  */
 window.addEventListener('load', function () {
     let startGameBtn = document.getElementById('start-game-btn');
-    startGameBtn.addEventListener('click', startModal);
+    startGameBtn.addEventListener('click', showModal);
 
     let closeModalPopup = document.getElementsByClassName("modal-close")[0];
     closeModalPopup.addEventListener('click', closeModal);
 
     let form = this.document.getElementById('UserGameDetails');
     form.addEventListener('submit', handleSubmitGameDetails);
-
-
 });
 
 /**
  * The beginning of the game. Function to display a popup modal to capture
  * details from the user before playing.
  */
-function startModal() {
+function showModal() {
     // Reset the name input
     document.getElementById("name").value = "";
     let modal = document.getElementById("gameDetailsModal");
