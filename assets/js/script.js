@@ -106,7 +106,7 @@ function checkCardsMatch() {
             CARD_IDENTIFIERS.firstCard.classList.remove('flip');
             CARD_IDENTIFIERS.secondCard.classList.remove('flip');
             resetCards();
-        }, 1200);
+        }, 1000);
     }
 }
 
