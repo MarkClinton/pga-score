@@ -9,7 +9,17 @@ window.addEventListener('load', function () {
     let closeModalPopup = document.getElementsByClassName("modal-close")[0];
     closeModalPopup.addEventListener('click', closeModal);
 
+    let form = this.document.getElementById('UserGameDetails');
+    form.addEventListener('submit', handleSubmitGameDetails);
+
+
 });
+
+function handleSubmitGameDetails(event) {
+    event.preventDefault();
+    console.log(this.name.value);
+    console.log(this.course.value);
+}
 
 function flipCard() {
     this.classList.toggle('flip');
