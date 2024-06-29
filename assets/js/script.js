@@ -39,7 +39,7 @@ function addElementsToGameArea() {
     // Remove the first element of the array and save it to a variable
     // First element is the back of card content and is only needed once.
     // Its not needed when looping through card array.
-    let backOfCardContent = playingCards.shift();
+    const backOfCardContent = playingCards.shift();
 
     for (let c of playingCards) {
         console.log(c);
@@ -54,6 +54,7 @@ function addElementsToGameArea() {
         // Give the card div a flex order style with that random number
         cardElement.style.order = ramdomCardPosition;
 
+        // Append the elements to the game-area 
         const append = gameArea.appendChild(cardElement.cloneNode());
         append.appendChild(frontOfCard.cloneNode());
         append.appendChild(backOfCard.cloneNode());
@@ -112,19 +113,19 @@ function getPlayingCards() {
 function createElementsForGameArea() {
 
     // Specify a new card div to be created
-    let createCardDiv = document.createElement("div");
+    const createCardDiv = document.createElement("div");
     // // Add the card class to the div
     createCardDiv.classList.add("card");
 
     // Create new img element for front of
     // card content to be placed inside the card div
-    let frontOfCard = document.createElement("img");
+    const frontOfCard = document.createElement("img");
     // Add the front-face class to the img
     frontOfCard.classList.add("front-face");
 
     // Create new img element for back of
     // card content to be placed inside the card div
-    let backOfCard = document.createElement("img");
+    const backOfCard = document.createElement("img");
     // Add the back-face class to the img
     backOfCard.classList.add("back-face");
 
