@@ -183,7 +183,7 @@ aside {
     transition: transform .3s;
 }
 
-.flip {
+.card.flip {
     transform: rotateY(180deg);
 }
 
