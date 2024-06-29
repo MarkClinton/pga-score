@@ -71,7 +71,7 @@ function submitGameDetails(event) {
  */
 function setUserDisplayName(user) {
     let userDisplay = document.getElementsByClassName('userDisplay')[0];
-    userDisplay.innerHTML = `<p>Player: ${user}</p>`;
+    userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
     userDisplay.style.display = "block";
 };
 
@@ -104,6 +104,7 @@ function checkCardsMatch() {
         CARD_IDENTIFIERS.secondCard.dataset.card;
 
     if (isMatch) {
+        checkIfAllCardsFlipped();
         disableCards();
     } else {
         setTimeout(() => {
@@ -133,6 +134,20 @@ function resetCards() {
     CARD_IDENTIFIERS.isCardFlipped = false;
     CARD_IDENTIFIERS.lockCardFlip = false;
 };
+
+/**
+ * Check if cards with the flip are the same number as cards displayed
+ */
+function checkIfAllCardsFlipped() {
+
+    let cardsNotFlipped = document.getElementsByClassName("card");
+    let cardsFlipped = document.getElementsByClassName('card flip');
+    let isMatch = cardsNotFlipped.length === cardsFlipped.length;
+    if (isMatch) {
+        alert("Congrats you have won!");
+    }
+
+}
 
 
 /**
