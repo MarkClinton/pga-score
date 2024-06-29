@@ -27,12 +27,15 @@ function startModal() {
     // When the user clicks anywhere outside of the modal, close it.
     // Defined here as the modal is displayed.
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     }
 };
 
+/**
+ * Fires from an EventListener to remove the modal from screen
+ */
 function closeModal() {
     let modal = document.getElementById("gameDetailsModal");
     modal.style.display = "none";
