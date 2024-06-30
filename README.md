@@ -106,13 +106,15 @@ of a modal making it re-usable.
 ## Bugs
 - The footer, when resizing the screen was overlapping onto the main element. The fix for this was to add a display: flex 
 to the body and align the header, main & footer elements using flex-direction: column.
+![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
 - The card flip functionlaity made a weird transition when turning. The fix for this was adding the perspective property to the game-area. 
-- When a first card was flipped it was still able to be selected which invoked the flipCard() function and turned it back over. The fix for this was to add a JS varibable firstCard which was initially set to null. Once the first card was selected and flipped, using 'this'
-the first card was saved to that variable. FlipCard() then checks if the firstCard varibale is clicked, if so it just returns
-out of the function not progressing any further. ??
+- When the initial first card was flipped it was still able to be selected which invoked the flipCard() function and turned it back over. The fix for this was to add a JS variable firstCard which was initially set to null. Once the first card was selected and flipped, using 'this' the first card was saved to that variable. FlipCard() then checks if the firstCard varibale is clicked, if so it just returns
+out of the function not progressing any further. The same functionality was added for secondCard.
+![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
 - A user was able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
 In the flipCard() function I added a lockFlip variable which didnt allow any other cards to be pressed until checkCardsMatch()
 finished.
+![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
 - Cards could still be clicked when they were a matching pair. They still had an EventListener attached. If we found a pair 
 then we call a function to remove the EventListerner from those cards.
 - When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
@@ -121,6 +123,8 @@ multiple times just moving down in the DOM.
 - Card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
 The reason behind this was I forgot to set my CSS class correctly. I only declared '.flip' instead of '.card.flip.' 
 Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active. 
+![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
+![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
 - Needed to have variables used in the flipCard() function in the global scope to keep track of the logic (Used a namespace). 
 It would have been easy to pass these variables to the needed functions and manipulate them. The issue arose when declaring 
 the variables. Declaring them in the flipCard() function meant they would be re-declared every time a card was clicked, 
