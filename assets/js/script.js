@@ -11,7 +11,7 @@ let CARD_IDENTIFIERS = {
  * get the button element and add eventListeners to it.
  */
 window.addEventListener('load', function () {
-    let startGameBtn = document.getElementById('start-game-btn');
+    let startGameBtn = document.getElementById('startGameBtn');
     startGameBtn.addEventListener('click', showModal);
 
     let closeModalPopup = document.getElementsByClassName("modal-close");
