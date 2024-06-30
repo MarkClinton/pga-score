@@ -24,8 +24,8 @@ window.addEventListener('load', function () {
 });
 
 /**
- * The beginning of the game. Function to display a popup modal to capture
- * details from the user before playing.
+ * This function gets the popup modal 'gameDetailsModal' 
+ * and sets its display to block.
  */
 function showModal() {
     // Reset the name input
@@ -44,7 +44,7 @@ function showModal() {
 }
 
 /**
- * Fires from an EventListener to remove the modal from screen
+ * This function finds both popup modals by ID and sets their display to none.
  */
 function closeModal() {
     // Tried using 'this' to grab the outermost parent and use the div to close
@@ -57,7 +57,8 @@ function closeModal() {
 }
 
 /**
- * 
+ * This function gets the popup modal 'gameEndModal' 
+ * and sets its display to block.
  */
 function showGameEndModal() {
     const modal = document.getElementById("gameEndModal");
@@ -65,8 +66,9 @@ function showGameEndModal() {
 }
 
 /**
- * Handles the user input to start the game
- * @param {*} event 
+ * This function gets details from the form before starting the game.
+ * It prevents the default form submission.
+ * @param {*} event - The form event
  */
 function submitGameDetails(event) {
     event.preventDefault();
@@ -81,8 +83,8 @@ function submitGameDetails(event) {
 }
 
 /**
- * Sets the users name above the game area
- * @param {*} user 
+ * This function displays a users name above the game area
+ * @param {*} user - The users name
  */
 function setUserDisplayName(user) {
     const userDisplay = document.getElementsByClassName('user-display')[0];
@@ -91,7 +93,9 @@ function setUserDisplayName(user) {
 }
 
 /**
- * Toggles the class 'flip' for a card
+ * This function fires when a card elemant is clicked 
+ * and if it passes the criteria applys the 
+ * class 'flip' to the element. 
  */
 function flipCard() {
     if (CARD_IDENTIFIERS.lockCardFlip) return;
@@ -112,7 +116,7 @@ function flipCard() {
 }
 
 /**
- * 
+ * This function checks whether two clicked cards have a matching data attribute
  */
 function checkCardsMatch() {
     let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card ===
@@ -134,8 +138,7 @@ function checkCardsMatch() {
 }
 
 /**
- * 
- * 
+ * This function removes the eventListener from a card element.
  */
 function disableCards() {
     CARD_IDENTIFIERS.firstCard.removeEventListener('click', flipCard);
@@ -144,7 +147,8 @@ function disableCards() {
 }
 
 /**
- * 
+ * This function sets variables needed in the flipCard function to 
+ * null and false
  */
 function resetCards() {
     CARD_IDENTIFIERS.firstCard = null;
@@ -154,7 +158,8 @@ function resetCards() {
 }
 
 /**
- * Check if cards with the flip are the same number as cards displayed
+ * This function checks if divs with the flip class applied are the 
+ * same as divs with the card class applied. If so, game is finished. 
  */
 function checkIfAllCardsFlipped() {
 
@@ -168,8 +173,8 @@ function checkIfAllCardsFlipped() {
 
 
 /**
- * Gathers all the elements and cards in one place. 
- * Loops through the cards and give value to created elements
+ * This function gathers all the elements and cards in one place. 
+ * Loops through the cards and gives values to created elements
  * appends elements to the DOM
  */
 function addElementsToGameArea(gameMode) {
@@ -214,7 +219,8 @@ function addElementsToGameArea(gameMode) {
 }
 
 /**
- * Function to clear all dynamically created elements from the game area
+ * This function removes all dynamically created elements 
+ * from the game area
  */
 function clearGameArea() {
     document.getElementById("name").value = "";
@@ -222,8 +228,8 @@ function clearGameArea() {
 }
 
 /**
- * Define an array of objects that contains card details
- * @returns a list of playing cards
+ * This function defines an array of objects that contain card details
+ * @returns {array} - The list of playing cards
  */
 function getPlayingCards() {
 
@@ -266,8 +272,8 @@ function getPlayingCards() {
 }
 
 /**
- * Define all the elements that are going to be placed on the DOM
- * @returns elements to be created
+ * This function defines all the elements that are going to be placed on the DOM
+ * @returns {array} - List of elements to create
  */
 function createElementsForGameArea() {
 
