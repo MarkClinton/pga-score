@@ -119,8 +119,11 @@ function checkCardsMatch() {
         CARD_IDENTIFIERS.secondCard.dataset.card;
 
     if (isMatch) {
-        checkIfAllCardsFlipped();
-        disableCards();
+        setTimeout(() => {
+            checkIfAllCardsFlipped();
+            disableCards();
+        }, 1000)
+
     } else {
         setTimeout(() => {
             CARD_IDENTIFIERS.firstCard.classList.remove('flip');
