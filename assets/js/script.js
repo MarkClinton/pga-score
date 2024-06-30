@@ -192,7 +192,9 @@ function addElementsToGameArea(gameMode) {
 
         cardElement.dataset.card = c.data;
         frontOfCard.src = c.src;
+        frontOfCard.alt = c.alt;
         backOfCard.src = backOfCardContent.src;
+        backOfCard.alt = backOfCardContent.alt;
 
         // Generate random number between 1 and the length of the object. Ideally. 
         // Currently its set to 12 and needs to be refactored. 
