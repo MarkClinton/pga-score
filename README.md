@@ -1,6 +1,8 @@
 # PGA Score 
 Live: https://markclinton.github.io/pga-score/
 
+![Main image](documentation/site_images/multi_screen_image.png)
+
 ## Index – Table of Contents
 * [About](#about) 
 * [Design](#design)
