@@ -70,7 +70,7 @@ function submitGameDetails(event) {
  * @param {*} user 
  */
 function setUserDisplayName(user) {
-    const userDisplay = document.getElementsByClassName('userDisplay')[0];
+    const userDisplay = document.getElementsByClassName('user-display')[0];
     userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
     userDisplay.style.display = "block";
 }

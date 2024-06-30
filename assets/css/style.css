@@ -161,7 +161,7 @@ aside {
     align-content: space-around;
 }
 
-.userDisplay {
+.user-display {
     display: none;
     width: 840px;
 }
@@ -235,7 +235,7 @@ aside {
     cursor: pointer;
 }
 
-.UserGameDetails {
+.user-game-details {
     margin-top: 30px;
 }
 
@@ -266,6 +266,19 @@ footer {
 @media (max-width: 1200px) {
     .course-about {
         width: 80%;
+    }
+
+    .game-area {
+        width: 540px;
+        justify-content: space-evenly;
+    }
+
+    .user-display {
+        width: 540px;
+    }
+
+    .card {
+        width: calc(45% - 10px);
     }
 }
 
