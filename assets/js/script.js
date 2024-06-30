@@ -29,7 +29,7 @@ function showModal() {
     // Reset the name input
     document.getElementById("name").value = "";
 
-    let modal = document.getElementById("gameDetailsModal");
+    const modal = document.getElementById("gameDetailsModal");
     modal.style.display = "block";
 
     // When the user clicks anywhere outside of the modal, close it.
@@ -45,7 +45,7 @@ function showModal() {
  * Fires from an EventListener to remove the modal from screen
  */
 function closeModal() {
-    let modal = document.getElementById("gameDetailsModal");
+    const modal = document.getElementById("gameDetailsModal");
     modal.style.display = "none";
 }
 
@@ -70,7 +70,7 @@ function submitGameDetails(event) {
  * @param {*} user 
  */
 function setUserDisplayName(user) {
-    let userDisplay = document.getElementsByClassName('userDisplay')[0];
+    const userDisplay = document.getElementsByClassName('userDisplay')[0];
     userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
     userDisplay.style.display = "block";
 }
@@ -140,9 +140,9 @@ function resetCards() {
  */
 function checkIfAllCardsFlipped() {
 
-    let cardsNotFlipped = document.getElementsByClassName("card");
-    let cardsFlipped = document.getElementsByClassName('card flip');
-    let isMatch = cardsNotFlipped.length === cardsFlipped.length;
+    const cardsNotFlipped = document.getElementsByClassName("card");
+    const cardsFlipped = document.getElementsByClassName('card flip');
+    const isMatch = cardsNotFlipped.length === cardsFlipped.length;
     if (isMatch) {
         alert("Congrats you have won!");
     }
@@ -158,8 +158,8 @@ function checkIfAllCardsFlipped() {
 function addElementsToGameArea(gameMode) {
 
     const gameArea = document.getElementsByClassName("game-area")[0];
-    let [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
-    let playingCards = getPlayingCards();
+    const [cardElement, frontOfCard, backOfCard] = createElementsForGameArea();
+    const playingCards = getPlayingCards();
 
     // Remove the first element of the array and save it to a variable
     // First element is the back of card content and is only needed once.
@@ -182,12 +182,12 @@ function addElementsToGameArea(gameMode) {
 
         // Generate random number between 1 and the length of the object. Ideally. 
         // Currently its set to 12 and needs to be refactored. 
-        let ramdomCardPosition = Math.floor(Math.random() * 12);
+        const ramdomCardPosition = Math.floor(Math.random() * 12);
         // Give the card div a flex order style with that random number
         cardElement.style.order = ramdomCardPosition;
 
         // Append the elements to the game-area 
-        let append = gameArea.appendChild(cardElement.cloneNode());
+        const append = gameArea.appendChild(cardElement.cloneNode());
         append.appendChild(frontOfCard.cloneNode());
         append.appendChild(backOfCard.cloneNode());
         append.addEventListener('click', flipCard);
@@ -253,19 +253,19 @@ function getPlayingCards() {
 function createElementsForGameArea() {
 
     // Specify a new card div to be created
-    let createCardDiv = document.createElement("div");
+    const createCardDiv = document.createElement("div");
     // // Add the card class to the div
     createCardDiv.classList.add("card");
 
     // Create new img element for front of
     // card content to be placed inside the card div
-    let frontOfCard = document.createElement("img");
+    const frontOfCard = document.createElement("img");
     // Add the front-face class to the img
     frontOfCard.classList.add("front-face");
 
     // Create new img element for back of
     // card content to be placed inside the card div
-    let backOfCard = document.createElement("img");
+    const backOfCard = document.createElement("img");
     // Add the back-face class to the img
     backOfCard.classList.add("back-face");
 
