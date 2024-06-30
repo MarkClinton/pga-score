@@ -21,6 +21,9 @@ window.addEventListener('load', function () {
 
     let form = this.document.getElementById('UserGameDetails');
     form.addEventListener('submit', submitGameDetails);
+
+    let restartGameBtn = this.document.getElementById('restartGame');
+    restartGameBtn.addEventListener('click', restartGame);
 });
 
 /**
@@ -90,6 +93,11 @@ function setUserDisplayName(user) {
     const userDisplay = document.getElementsByClassName('user-display')[0];
     userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
     userDisplay.style.display = "block";
+}
+
+function restartGame() {
+    closeModal();
+    showModal();
 }
 
 /**

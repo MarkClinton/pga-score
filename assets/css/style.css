@@ -144,6 +144,14 @@ aside {
     top: 2px;
 }
 
+.red-btn {
+    background: #F1373D;
+}
+
+.red-btn:hover {
+    background: #B9171C;
+}
+
 .game-contain {
     display: flex;
     flex: 1 0 auto;
