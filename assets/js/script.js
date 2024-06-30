@@ -14,8 +14,10 @@ window.addEventListener('load', function () {
     let startGameBtn = document.getElementById('start-game-btn');
     startGameBtn.addEventListener('click', showModal);
 
-    let closeModalPopup = document.getElementsByClassName("modal-close")[0];
-    closeModalPopup.addEventListener('click', closeModal);
+    let closeModalPopup = document.getElementsByClassName("modal-close");
+    for (const close of closeModalPopup) {
+        close.addEventListener('click', closeModal);
+    }
 
     let form = this.document.getElementById('UserGameDetails');
     form.addEventListener('submit', submitGameDetails);
@@ -45,8 +47,21 @@ function showModal() {
  * Fires from an EventListener to remove the modal from screen
  */
 function closeModal() {
-    const modal = document.getElementById("gameDetailsModal");
-    modal.style.display = "none";
+    // Tried using 'this' to grab the outermost parent and use the div to close
+    // issue with that was on submit of new game the submit button also calls
+    // this function. When the submit button is the 'this' element, it breaks
+    const startModal = document.getElementById("gameDetailsModal");
+    const endModal = document.getElementById("gameEndModal");
+    startModal.style.display = "none";
+    endModal.style.display = "none";
+}
+
+/**
+ * 
+ */
+function showGameEndModal() {
+    const modal = document.getElementById("gameEndModal");
+    modal.style.display = "block";
 }
 
 /**
@@ -144,9 +159,8 @@ function checkIfAllCardsFlipped() {
     const cardsFlipped = document.getElementsByClassName('card flip');
     const isMatch = cardsNotFlipped.length === cardsFlipped.length;
     if (isMatch) {
-        alert("Congrats you have won!");
+        showGameEndModal();
     }
-
 }
 
 
