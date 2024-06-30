@@ -22,17 +22,20 @@ The underlying game itself is simple, the theme of golf is to give the game a fu
 
 ## Design
 The game is intended to be fun and engaging. Green colours used are to represent a golf course. The accent colours mimic 
-the colours used by the PGA website. 
+the colours used by the PGA website. PDF can be seen here for more details on the design documentation.
 
 - ### Colour Scheme 
 The main colours of the site (#009f6b, #009966) are different shades of green. Used to represent the different shades found
 on a golf course. the accent colours (#163B7C) mimic the colour used by PGA. It elicits a familiar, nostalgic feeling 
  used by the already exisitng brand PGA.  
+ ![Colour Scheme](documentation/design/design_pre_work.png)
 
 - ### Imagery
 The main logo is a play on the PGA Tour logo. It was traced from the original PGA Tour logo and tour was replaced with the word
 score. The imagery used on the back of the playing cards is the same image of a golfer used by the PGA. The front face of the 
 cards is images of golfers who play on the PGA Tour. 
+![Card Design](documentation/design/design_card.png)
+![Logo Design](documentation/design/design_logo.png)
 
 - ### Typography 
 
