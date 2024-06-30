@@ -19,7 +19,7 @@ window.addEventListener('load', function () {
         close.addEventListener('click', closeModal);
     }
 
-    let form = this.document.getElementById('UserGameDetails');
+    let form = this.document.getElementById('userGameDetails');
     form.addEventListener('submit', submitGameDetails);
 
     let restartGameBtn = this.document.getElementById('restartGame');
