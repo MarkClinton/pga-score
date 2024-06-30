@@ -280,6 +280,10 @@ footer {
     .card {
         width: calc(45% - 10px);
     }
+
+    .popup-modal-content {
+        width: 50%;
+    }
 }
 
 /* Media query: screens less than 992px */
@@ -338,5 +342,9 @@ footer {
 
     .about-container {
         width: 70%;
+    }
+
+    .popup-modal-content {
+        width: 60%;
     }
 }
