@@ -48,6 +48,26 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
 ## Features
 
+- ### Two Game Modes
+
+- ### User Name 
+
+- ### Card Shuffle 
+
+- ### Restart Game Option
+
+- ### Game Flow 
+
+  - #### Two Card Selection
+  - #### Matched Card Control 
+  - #### Non Matched Card Control
+
+- ### End Game Notification
+
+- ### Immersive Theme
+
+- ### Responsive Design
+
 ### Future Features
 - A timer. A timer starts when the game are is populated with cards and records the time taken for a user to match all cards. 
 I intially wrote this into the spec before starting the project but never got the time to try and implement it. The idea would

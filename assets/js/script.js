@@ -1,3 +1,5 @@
+// jshint esversion: 6
+
 // Declaring a 'namespace' to reduce the global scope of variables.
 let CARD_IDENTIFIERS = {
     isCardFlipped: false,
@@ -134,7 +136,7 @@ function checkCardsMatch() {
         setTimeout(() => {
             checkIfAllCardsFlipped();
             disableCards();
-        }, 1000)
+        }, 1000);
 
     } else {
         setTimeout(() => {
