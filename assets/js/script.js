@@ -79,7 +79,7 @@ function submitGameDetails(event) {
     event.preventDefault();
 
     const user = this.name.value;
-    const gameMode = this.course.value;
+    const gameMode = parseInt(this.course.value);
 
     clearGameArea();
     setUserDisplayName(user);
