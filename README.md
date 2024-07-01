@@ -3,17 +3,6 @@ Live: https://markclinton.github.io/pga-score/
 
 ![Main image](documentation/site_images/multi_screen_image.png)
 
-## Index – Table of Contents
-* [About](#about) 
-* [Design](#design)
-* [Target Audience](#target-audience)
-* [Features](#features)
-* [Testing](#testing)
-* [Languages Used](#technologies-used)
-* [Deployment](#deployment)
-* [Credits](#credits)
-* [Issues](#issues)
-
 ## About
 PGA Score is a golf themed Javascript web game. The game itself is based upon the classic card memory game. A user must 
 click a card, whoch is face down, and click another card to find the corresponding match. If they dont find a match, both
@@ -105,18 +94,18 @@ would that it wouldnt look out of place in a list on one of those old flash base
 - ### Responsive Design
 
 ### Future Features
-- A timer. A timer starts when the game are is populated with cards and records the time taken for a user to match all cards. 
+1. A timer. A timer starts when the game are is populated with cards and records the time taken for a user to match all cards. 
 I intially wrote this into the spec before starting the project but never got the time to try and implement it. The idea would
 be that, depending on the time, a user would be a given a score based on a handicap, just like in golf. It would have been done
 in groups i.e. if the user gets a time of 15-20 seconds they would get a handicap of -1. 20-25s would get a handicap of par.
-- Another Game Mode. Currently there is Easy or Hard and determines the amount of cards to be shown on the game area. Hard 
+2. Another Game Mode. Currently there is Easy or Hard and determines the amount of cards to be shown on the game area. Hard 
 would be renamed to Medium and a new game mode introduced as Hard. The new Hard game mode would consist of half the cards 
 being images of golfers and the other half being text. The text would be the last time they won a PGA Championship. The 
 player would have to match the image to the last time that golfer won a PGA Championship.
-- Implement more cards. Implement functionality to have a big list of cards created that the game would choose from depending
+3. Implement more cards. Implement functionality to have a big list of cards created that the game would choose from depending
 on the game mode chosen. This would mean that we could have a mix of different cards that could be displayed so a user doesnt
 see the same cards every time they play. 
-- Dynamic Modal. Currently the game is using two separate modals defined on index.html. One that popups when the user starts
+4. Dynamic Modal. Currently the game is using two separate modals defined on index.html. One that popups when the user starts
 a game. One that pop ups when a user finishes a game. Having a dynamoc modal could mean only defining one modal on index.html
 and populating it with elements using javascript, depending on the need for the content. Javascript could handle the content
 of a modal making it re-usable. 
@@ -124,12 +113,14 @@ of a modal making it re-usable.
 ## Technologies
 
 ### Languages
-- HTML
-- CSS
-- JavaScript
+- HTML - Provide the structure of the webpage. 
+- CSS - Used in conjunction with HTML for styling elements. 
+- JavaScript - Provides the logic of the application. Allowing the end user the interact with the webpage. 
 
 ### Other Tools
 - [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools)
 - [Git](https://git-scm.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [GoFullPage](https://gofullpage.com/) to take full page screenshots.
@@ -163,44 +154,36 @@ of a modal making it re-usable.
 - ### Compatibility Testing
 
 ## Bugs
-- The footer, when resizing the screen was overlapping onto the main element. The fix for this was to add a display: flex 
-to the body and align the header, main & footer elements using flex-direction: column.
-
+- Bug: The footer, when resizing the screen was overlapping onto the main element. 
+_Solution: Add a display: flex to the body and align the header, main & footer elements using flex-direction: column._
 ![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
 
-- The card flip functionlaity made a weird transition when turning. The fix for this was adding the perspective property to the game-area. 
+- Bug: The card flip functionlaity made a weird transition when turning. 
+_Solution: Add the perspective property to the game-area with a value of 1000px_ 
 
-- When the initial first card was flipped it was still able to be selected which invoked the flipCard() function and turned it back over. 
-The fix for this was to add a JS variable firstCard which was initially set to null. Once the first card was selected and flipped, using 'this' 
-the first card was saved to that variable. FlipCard() then checks if the firstCard varibale is clicked, if so it just returns out of the function 
-not progressing any further. The same functionality was added for secondCard.
-
+- Bug: When the initial first card was flipped it could still be selected which invoked the flipCard() function. 
 ![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
+_Solution: Add a JS variable called firstCard which is initially set to null. Once the first card is selected and flipped, using 'this' the first card is saved to that variable. FlipCard() then checks if the firstCard variable is clicked, if so it returns out of the function. The same functionality was added for a secondCard variable._
 
-- A user was able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
-In the flipCard() function I added a lockFlip variable which didnt allow any other cards to be pressed until checkCardsMatch()
-finished.
+- Bug: A user is able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
+- _Solution: In the flipCard() function, a lockFlip variable was added which didnt allow any other cards to be pressed until checkCardsMatch()finished._
 
 ![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
 
-- Cards could still be clicked when they were a matching pair. They still had an EventListener attached. If we found a pair 
-then we call a function to remove the EventListerner from those cards.
+- Bug: Cards could still be clicked when they were flipped and a matching pair. The EventListener was still attached. 
+- _Solution: When a pair is found we call a function to remove the EventListerner from those cards._
 
-- When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
-The reason being was I wasnt using the cloneNode() when appending. Not using this meant I was adding the same element 
-multiple times just moving down in the DOM.
+- Bug: When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
+- _Solution: Use cloneNode() when appending. Not using this meant I was adding the same element multiple times just moving down in the DOM._
 
-- Card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
-The reason behind this was I forgot to set my CSS class correctly. I only declared '.flip' instead of '.card.flip.' 
-Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active.
+- Bug: A card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
+- _Solution: CSS class was only declared as '.flip' instead of '.card.flip.' Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active._
 
 ![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
 ![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
 
-- Needed to have variables used in the flipCard() function in the global scope to keep track of the logic (Used a namespace). 
-It would have been easy to pass these variables to the needed functions and manipulate them. The issue arose when declaring 
-the variables. Declaring them in the flipCard() function meant they would be re-declared every time a card was clicked, 
-losing the value needed. 
+- Bug: Global variables used in the flipCard() function are needed in the global scope to keep track of the logic. 
+- _Solution: In order to minimize the varibales in the Global Scope a namespace object was used to declare a number of variables in the global scope_
 
 
 ## Credits
