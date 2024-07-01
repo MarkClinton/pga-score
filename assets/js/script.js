@@ -35,6 +35,8 @@ window.addEventListener('load', function () {
 function showModal() {
     // Reset the name input
     document.getElementById("name").value = "";
+    // Reset the course input
+    document.getElementById("course").value = "";
 
     const modal = document.getElementById("gameDetailsModal");
     modal.style.display = "block";
