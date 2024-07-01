@@ -13,18 +13,18 @@ let CARD_IDENTIFIERS = {
  * get the button element and add eventListeners to it.
  */
 window.addEventListener('load', function () {
-    let startGameBtn = document.getElementById('startGameBtn');
+    const startGameBtn = document.getElementById('startGameBtn');
     startGameBtn.addEventListener('click', showModal);
 
-    let closeModalPopup = document.getElementsByClassName("modal-close");
-    for (const close of closeModalPopup) {
+    const closeModalPopup = document.getElementsByClassName("modal-close");
+    for (let close of closeModalPopup) {
         close.addEventListener('click', closeModal);
     }
 
-    let form = this.document.getElementById('userGameDetails');
+    const form = this.document.getElementById('userGameDetails');
     form.addEventListener('submit', submitGameDetails);
 
-    let restartGameBtn = this.document.getElementById('restartGame');
+    const restartGameBtn = this.document.getElementById('restartGame');
     restartGameBtn.addEventListener('click', restartGame);
 });
 
@@ -129,7 +129,7 @@ function flipCard() {
  * This function checks whether two clicked cards have a matching data attribute
  */
 function checkCardsMatch() {
-    let isMatch = CARD_IDENTIFIERS.firstCard.dataset.card ===
+    const isMatch = CARD_IDENTIFIERS.firstCard.dataset.card ===
         CARD_IDENTIFIERS.secondCard.dataset.card;
 
     if (isMatch) {
