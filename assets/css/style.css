@@ -50,6 +50,10 @@ a {
     margin-top: 20px;
 }
 
+.mobile-warning {
+    display: none;
+}
+
 /* Header */
 header {
     background-color: #009966;
@@ -331,6 +335,11 @@ footer {
         width: 40%;
         margin: 10px 0 10px 0;
         padding: 20px;
+    }
+
+    .mobile-warning {
+        display: block;
+        color: #F1373D;
     }
 
     footer {
