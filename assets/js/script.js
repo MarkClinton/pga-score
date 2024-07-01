@@ -39,13 +39,13 @@ function showModal() {
     document.getElementById("course").value = "";
 
     const modal = document.getElementById("gameDetailsModal");
-    modal.style.display = "block";
+    modal.classList.add("show");
 
     // When the user clicks anywhere outside of the modal, close it.
     // Defined here as the modal is displayed.
     window.onclick = function (event) {
         if (event.target === modal) {
-            modal.style.display = "none";
+            modal.classList.remove("show");
         }
     };
 }
@@ -59,8 +59,8 @@ function closeModal() {
     // this function. When the submit button is the 'this' element, it breaks
     const startModal = document.getElementById("gameDetailsModal");
     const endModal = document.getElementById("gameEndModal");
-    startModal.style.display = "none";
-    endModal.style.display = "none";
+    startModal.classList.remove("show");
+    endModal.classList.remove("show");
 }
 
 /**
@@ -69,7 +69,7 @@ function closeModal() {
  */
 function showGameEndModal() {
     const modal = document.getElementById("gameEndModal");
-    modal.style.display = "block";
+    modal.classList.add("show");
 }
 
 /**
@@ -107,7 +107,7 @@ function submitGameDetails(event) {
 function setUserDisplayName(user) {
     const userDisplay = document.getElementsByClassName('user-display')[0];
     userDisplay.innerHTML = `<h3>Player: ${user}</h3>`;
-    userDisplay.style.display = "block";
+    userDisplay.classList.add("show");
 }
 
 function restartGame() {

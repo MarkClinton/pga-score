@@ -232,6 +232,10 @@ aside {
     border-radius: 5px;
 }
 
+.show {
+    display: block;
+}
+
 /* The Close Button */
 .modal-close {
     color: #aaa;
