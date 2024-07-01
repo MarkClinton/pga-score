@@ -259,6 +259,10 @@ aside {
     font-family: 'Raleway', sans-serif;
 }
 
+label {
+    display: block;
+}
+
 /* Footer content*/
 footer {
     background-color: #009966;
