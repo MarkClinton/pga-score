@@ -61,10 +61,34 @@ would that it wouldnt look out of place in a list on one of those old flash base
 ## Features
 
 - ### Two Game Modes
+  - User has a choice of two game modes. Easy or Hard. Easy consists of 8 cards displayed on the game area. Hard consists
+  of 12 cards displayed on the game area.
+
+    <details><summary>Game Modes</summary> 
+
+    <p align="center"><img src="" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### User Name 
+  - User can enter their name which will be displayed above the game area.
+
+    <details><summary>User Name</summary> 
+
+    <p align="center"><img src="" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Card Shuffle 
+  - Cards are placed on the game area at random. The game area utilises flex box and the cards are given an order. The 
+  order us calculated using a random number between 1 and the number of cards on display. The user will get unique 
+  placement of cards everytime they play. 
+
+    <details><summary>Card Shuffle</summary> 
+
+    <p align="center"><img src="" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Restart Game Option
 

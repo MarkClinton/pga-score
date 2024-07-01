@@ -205,6 +205,8 @@ function addElementsToGameArea(gameMode) {
     // Duplicate the array and overwrite the original. Means we now append 2
     // of each card to the game area.
     playingCards.push(...playingCards);
+    // Number of cards to be displayed. Used to get a random number.
+    const orderPos = gameMode * 2;
 
     for (let c of playingCards) {
 
@@ -216,7 +218,7 @@ function addElementsToGameArea(gameMode) {
 
         // Generate random number between 1 and the length of the object. Ideally. 
         // Currently its set to 12 and needs to be refactored. 
-        const ramdomCardPosition = Math.floor(Math.random() * 12);
+        const ramdomCardPosition = Math.floor(Math.random() * orderPos);
         // Give the card div a flex order style with that random number
         cardElement.style.order = ramdomCardPosition;
 
