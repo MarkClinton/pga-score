@@ -28,19 +28,31 @@ the colours used by the PGA website. PDF can be seen here for more details on th
 The main colours of the site (#009f6b, #009966) are different shades of green. Used to represent the different shades found
 on a golf course. the accent colours (#163B7C) mimic the colour used by PGA. It elicits a familiar, nostalgic feeling 
  used by the already exisitng brand PGA.  
- ![Colour Scheme](documentation/design/design_pre_work.png)
+
+ [Link to Design Ideas PDF](documentation/design/pdf/PGA%20Score%20-%20Design%20Ideas.pdf)
 
 - ### Imagery
 The main logo is a play on the PGA Tour logo. It was traced from the original PGA Tour logo and tour was replaced with the word
-score. The imagery used on the back of the playing cards is the same image of a golfer used by the PGA. The front face of the 
-cards is images of golfers who play on the PGA Tour. 
-![Card Design](documentation/design/design_card.png)
-![Logo Design](documentation/design/design_logo.png)
+score. This was done using the Freeform app for MacOS. The imagery used on the back of the playing cards is the same image of a 
+golfer used by the PGA. The front face of the cards is images of golfers who play on the PGA Tour. 
+
+[Link to Card Design PDF](documentation/design/pdf/PGA%20Score%20-%20Card.pdf)
+
+[Link to Logo Design PDF](documentation/design/pdf/PGA%20Score%20-%20Logo.pdf)
 
 - ### Typography 
 
 
 - ### Wireframes
+Prototypes for the website were designed using Freeform. 
+
+[Link to the Webpages PDF](documentation/design/pdf/PGA%20Score%20-%20Web%20Page%20Mockup.pdf)
+
+- ### Workflow
+The initial workflow for the website was also created using Freeform.
+
+[Link to the Webpages PDF](documentation/design/pdf/PGA%20Score%20-%20Workflow.pdf)
+
 
 ## Target Audience
 The target audience would be anyone who like to play web based games and has an interest in golf. The idea behind this game
@@ -129,25 +141,38 @@ of a modal making it re-usable.
 ## Bugs
 - The footer, when resizing the screen was overlapping onto the main element. The fix for this was to add a display: flex 
 to the body and align the header, main & footer elements using flex-direction: column.
+
 ![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
+
 - The card flip functionlaity made a weird transition when turning. The fix for this was adding the perspective property to the game-area. 
-- When the initial first card was flipped it was still able to be selected which invoked the flipCard() function and turned it back over. The fix for this was to add a JS variable firstCard which was initially set to null. Once the first card was selected and flipped, using 'this' the first card was saved to that variable. FlipCard() then checks if the firstCard varibale is clicked, if so it just returns
-out of the function not progressing any further. The same functionality was added for secondCard.
+
+- When the initial first card was flipped it was still able to be selected which invoked the flipCard() function and turned it back over. 
+The fix for this was to add a JS variable firstCard which was initially set to null. Once the first card was selected and flipped, using 'this' 
+the first card was saved to that variable. FlipCard() then checks if the firstCard varibale is clicked, if so it just returns out of the function 
+not progressing any further. The same functionality was added for secondCard.
+
 ![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
+
 - A user was able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
 In the flipCard() function I added a lockFlip variable which didnt allow any other cards to be pressed until checkCardsMatch()
 finished.
+
 ![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
+
 - Cards could still be clicked when they were a matching pair. They still had an EventListener attached. If we found a pair 
 then we call a function to remove the EventListerner from those cards.
+
 - When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
 The reason being was I wasnt using the cloneNode() when appending. Not using this meant I was adding the same element 
 multiple times just moving down in the DOM.
+
 - Card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
 The reason behind this was I forgot to set my CSS class correctly. I only declared '.flip' instead of '.card.flip.' 
-Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active. 
+Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active.
+
 ![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
 ![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
+
 - Needed to have variables used in the flipCard() function in the global scope to keep track of the logic (Used a namespace). 
 It would have been easy to pass these variables to the needed functions and manipulate them. The issue arose when declaring 
 the variables. Declaring them in the flipCard() function meant they would be re-declared every time a card was clicked, 
