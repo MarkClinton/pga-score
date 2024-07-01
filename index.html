@@ -76,22 +76,19 @@
                 <p>Enter your name and course you wish to play.</p>
 
                 <form id="userGameDetails" class="user-game-details" target="_self">
-                    <label for="name">
-                        <p>Name</p>
+                    <p>
+                        <label for="name">Name</label>
                         <input type="text" class="form-input" id="name" name="name" minlength="3" maxlength="15"
                             required>
-                    </label><br>
-                    <label for="course">
-                        <p>Course</p>
+                    </p><br>
+                    <p>
+                        <label for="course">Course</label>
                         <select class="form-input" id="course" required>
-                            <option value="4">
-                                <p>The K Club (Easy)</p>
-                            </option>
-                            <option value="6">
-                                <p>Augusta (Hard)</p>
-                            </option>
+                            <option value="">Choose course..</option>
+                            <option value="4">The K Club (Easy)</option>
+                            <option value="6">Augusta (Hard)</option>
                         </select>
-                    </label>
+                    </p>
                     <br>
                     <input type="submit" class="btn margin-top" value="Lets Play">
                 </form>
