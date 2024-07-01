@@ -80,8 +80,19 @@ function showGameEndModal() {
 function submitGameDetails(event) {
     event.preventDefault();
 
-    const user = this.name.value;
+    const user = this.name.value.trim();
     const gameMode = parseInt(this.course.value);
+
+    if (user) {
+        //Update the input with the trimmed value
+        this.name.value = user;
+    } else {
+        //Trimmed value is empty
+        alert("Please enter valid input");
+        this.name.focus();
+        this.name.value = "";
+        return false;
+    }
 
     clearGameArea();
     setUserDisplayName(user);
