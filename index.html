@@ -10,22 +10,24 @@
     <meta name="author" content="Mark Clinton">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5b3d4c03ab.js" crossorigin="anonymous"></script>
-    <!-- Stylesheet -->
+    <!-- Link to stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-
+    <!-- Title -->
     <title>PGA Score | Home</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <h1 class="hidden">Welcome to the PGA Score</h1>
         <a href="index.html" aria-label="Go to home page">
             <img src="assets/images/pga_score_logo.png" class="logo" alt="PGA Score Logo">
         </a>
     </header>
+    <!-- Main -->
     <main>
         <section class="main-contain">
             <!-- H2 is hidden to minimize the W3 Validator warning 
@@ -61,22 +63,18 @@
                 </div>
                 <button class="btn" id="startGameBtn">Start New Game</button>
             </aside>
-
             <section class="game-contain">
                 <h2 class="hidden">Game area</h2>
                 <div class="user-display"></div>
-                <div class="game-area">
-
-                </div>
+                <div class="game-area"></div>
             </section>
         </section>
-
+        <!-- Modal Start Game -->
         <div id="gameDetailsModal" class="popup-modal">
             <div class="popup-modal-content">
                 <span class="modal-close">&times;</span>
                 <h2>Get your clubs ready.</h2>
                 <p>Enter your name and course you wish to play.</p>
-
                 <form id="userGameDetails" class="user-game-details" target="_self">
                     <p>
                         <label for="name">Name</label>
@@ -95,7 +93,7 @@
                 </form>
             </div>
         </div>
-
+        <!-- Modal End Game-->
         <div id="gameEndModal" class="popup-modal">
             <div class="popup-modal-content">
                 <span class="modal-close">&times;</span>
@@ -108,14 +106,14 @@
             </div>
         </div>
     </main>
-
+    <!-- Footer -->
     <footer>
         <a href="https://github.com/MarkClinton/pga-score" target="_blank" rel="noopener"
             aria-label="Visit the GitHub repo (opens in a new tab)">
             <i class="fa-brands fa-github"></i>
         </a>
     </footer>
-
+    <!-- Link to script.js -->
     <script src="assets/js/script.js"></script>
 </body>
 
