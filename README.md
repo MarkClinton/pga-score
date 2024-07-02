@@ -127,6 +127,7 @@ of a modal making it re-usable.
 - [GitHub](https://github.com/)
 - [GitHub Pages](https://pages.github.com/)
 - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools)
+- [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
 - [Git](https://git-scm.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [GoFullPage](https://gofullpage.com/) to take full page screenshots.
