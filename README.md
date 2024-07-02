@@ -42,7 +42,7 @@ Prototypes for the website were designed using Freeform.
 - ### Workflow
 The initial workflow for the website was also created using Freeform.
 
-[Link to the Webpages PDF](documentation/design/PGA%20Score%20-%20Workflow.pdf)
+[Link to the Workflow PDF](documentation/design/PGA%20Score%20-%20Workflow.pdf)
 
 
 ## Target Audience
@@ -138,8 +138,6 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
     </details>
 
-- ### Information Section When Game Is Won
-
 - ### Immersive Theme
   - The theme takes elements from already existing media such as PGA Tour and builds upon it to give a sense of familiarity.
 
@@ -183,12 +181,12 @@ of a modal making it re-usable.
 - JavaScript - Provides the logic of the application. Allowing the end user the interact with the webpage. 
 
 ### Other Tools
-- [GitHub](https://github.com/)
-- [GitHub Pages](https://pages.github.com/)
-- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools)
-- [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
-- [Git](https://git-scm.com/)
-- [Google Fonts](https://fonts.google.com/)
+- [GitHub](https://github.com/) to host the repository
+- [GitHub Pages](https://pages.github.com/) to host the deployed site
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools) for debugging and testing
+- [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) for performance testing
+- [Git](https://git-scm.com/) for version control
+- [Google Fonts](https://fonts.google.com/) for fonts
 - [GoFullPage](https://gofullpage.com/) to take full page screenshots.
 - [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb/related?hl=en) for testing my site on all screen sizes.
 
@@ -252,6 +250,8 @@ of a modal making it re-usable.
 ||Click Restart Game button|Users name should persist on restart| Pass |
 ||Click Start New Game button|Users name should reset on new game| Pass |
 
+- ### Sandbox Testing
+  - Initial prototyping for this project started out in the [PGA Score Testing](https://github.com/MarkClinton/pga-score-testing) repository. I used this "sandbox" repo to test ideas and functionality. Once happy with a basic level of functionality I took what I learnt and applied it to a new repository which is now the PP2 project [PGA Score](https://github.com/MarkClinton/pga-score?tab=readme-ov-file). The goal of that repository was work quickly to see what functionality I can come up with. The testing repository does not follow best practices. In hindsight, I should have followed a regular commit cadence with this testing repository so as I could go back to when needed and test different versions. 
 
 - ### Compatibility Testing
   - Chrome Desktop Version 126.0.6478.127 
