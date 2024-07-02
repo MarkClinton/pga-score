@@ -172,6 +172,8 @@ see the same cards every time they play.
 a game. One that pop ups when a user finishes a game. Having a dynamic modal could mean only defining one modal on index.html
 and populating it with elements using javascript, depending on the need for the content. Javascript could handle the content
 of a modal making it reusable. 
+5. A number of wrong selects per game mode. If a user hits a certin number of selects where no card is matched it should be recorded
+and once the limit is hit the game should end for the user. i.e. 5 tries for the Easy game mode. 7 tries for the Hard game mode. 
 
 ## Technologies
 
