@@ -215,6 +215,19 @@ of a modal making it re-usable.
 
 - ### Validator Testing
 
+  - Performance using [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) chrome extension
+    - [Desktop](documentation/testing_images/lighthouse_desktop.png): Overall score: 100
+    - [Mobile](documentation/testing_images/lighthouse_mobile.png): Overall Score: 89
+
+  - JavaScript using [JSHint](https://jshint.com/)
+    - [script.js](documentation/testing_images/jshint.png)
+
+  - HTML: using [W3 Validator](https://validator.w3.org/)
+    - [index.html](documentation/testing_images/w3_validator.png)
+
+  - CSS: Using [Jigsaw Validator](https://jigsaw.w3.org/css-validator/)
+    - [style.css](documentation/testing_images/w3c_validator.png)
+
 - ### Manual Testing 
 
 - ### Compatibility Testing
