@@ -270,36 +270,36 @@ function clearGameArea() {
 function getPlayingCards() {
 
     const listOfCards = [{
-            src: "assets/images/back_of_card.jpg",
+            src: "assets/images/back_of_card.webp",
             alt: "PGA Golfer"
         },
         {
-            src: "assets/images/golfers/john_daly.png",
+            src: "assets/images/golfers/john_daly.webp",
             data: "daly",
             alt: "John Daly"
         },
         {
-            src: "assets/images/golfers/robert_macintyre.png",
+            src: "assets/images/golfers/robert_macintyre.webp",
             data: "macintyre",
             alt: "Robert MacIntyre"
         },
         {
-            src: "assets/images/golfers/rory_mcilroy.png",
+            src: "assets/images/golfers/rory_mcilroy.webp",
             data: "mcilroy",
             alt: "Rory McIlroy"
         },
         {
-            src: "assets/images/golfers/sahith_theegala.png",
+            src: "assets/images/golfers/sahith_theegala.webp",
             data: "theegala",
             alt: "Sahith Theegala"
         },
         {
-            src: "assets/images/golfers/shane_lowry.png",
+            src: "assets/images/golfers/shane_lowry.webp",
             data: "lowry",
             alt: "Shane Lowry"
         },
         {
-            src: "assets/images/golfers/tiger_woods.png",
+            src: "assets/images/golfers/tiger_woods.webp",
             data: "woods",
             alt: "Tiger Woods"
         }
