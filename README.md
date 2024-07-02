@@ -212,6 +212,9 @@ of a modal making it re-usable.
 ## Testing
 
 - ### Screen Size Testing
+  - To test the responsiveness of my website across all screen sizes I mainly used the Developer Tools to test this. I also used Responsive Viewer to get an overview of my site on several screens at once to help spot any mistakes. 
+
+![Responsive Viewer](documentation/testing_images/responsive_viewer.png)
 
 - ### Validator Testing
 
@@ -283,22 +286,22 @@ of a modal making it re-usable.
   - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) MDN Web Docs had some great explanations of built in JS functions
 
 - ### Media
-  - [PGS Tour](https://www.pgatour.com/) for all images of golfers, inspiration for the logo and back of the card.
+  - [PGA Tour](https://www.pgatour.com/) for all images of golfers, inspiration for the logo and back of the card.
 
 - ### Helpful Links
 
-  - [How to flip a card](https://www.w3schools.com/howto/howto_css_flip_card.asp) 
-  - [Display an image from an array in JS](https://www.geeksforgeeks.org/how-to-display-images-from-an-array-in-javascript/)
-  - [Adding elements in a loop to dom](https://stackoverflow.com/questions/69445670/javascript-for-loop-appends-same-element-once)
-  - [Set the source of an image in JS](https://stackoverflow.com/questions/1232793/javascript-set-img-src)
-  - [Desktop-First Media Queries](https://joegalley.com/articles/mobile-first-vs-desktop-first-media-queries#:~:text=If%20you%20expect%20your%20desktop,template%20on%20progressively%20smaller%20screens)
-  - [Trim() function JS](https://stackoverflow.com/questions/8120983/trim-spaces-from-form-input)
-  - [Calc in CSS](https://www.w3schools.com/cssref/func_calc.php)
-  - [How To - CSS/JS Modal](https://www.w3schools.com/howto/howto_css_modals.asp)
-  - [Shift() function JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-  - [Check if all elements have the same class](https://www.geeksforgeeks.org/how-to-find-whether-all-element-contains-same-class-or-not/)
-  - [Access form data through event property](https://stackoverflow.com/questions/72982035/can-you-access-a-html-form-data-from-the-event-property-or-a-this-keyword-in)
-  - [Using a namespace in JS](https://stackoverflow.com/questions/6928926/what-advantages-are-gained-by-using-namespaces-in-javascript)
+  - [How to flip a card](https://www.w3schools.com/howto/howto_css_flip_card.asp) - To help get the inital functionlaity off the ground
+  - [Display an image from an array in JS](https://www.geeksforgeeks.org/how-to-display-images-from-an-array-in-javascript/) - To help with dynamically adding images to the DOM
+  - [Adding elements in a loop to dom](https://stackoverflow.com/questions/69445670/javascript-for-loop-appends-same-element-once) - Also to help with dynamically adding images to the DOM
+  - [Set the source of an image in JS](https://stackoverflow.com/questions/1232793/javascript-set-img-src) - How to set the source of an image in JavaScript
+  - [Desktop-First Media Queries](https://joegalley.com/articles/mobile-first-vs-desktop-first-media-queries#:~:text=If%20you%20expect%20your%20desktop,template%20on%20progressively%20smaller%20screens) - To know the media query screen sizes needed for desktop first approach
+  - [Trim() function JS](https://stackoverflow.com/questions/8120983/trim-spaces-from-form-input) - To help remove whitespace in user input
+  - [Calc in CSS](https://www.w3schools.com/cssref/func_calc.php) - To help calculate the width of the cards in the game area
+  - [How To - CSS/JS Modal](https://www.w3schools.com/howto/howto_css_modals.asp) - How to create and use a modal with JS, HTML and CSS
+  - [Shift() function JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) - How to remove the first element of an array and save it to a variable
+  - [Check if all elements have the same class](https://www.geeksforgeeks.org/how-to-find-whether-all-element-contains-same-class-or-not/) - Helped to find out when all cards matched to display game end modal.
+  - [Access form data through event property](https://stackoverflow.com/questions/72982035/can-you-access-a-html-form-data-from-the-event-property-or-a-this-keyword-in) - To help gather form data before 'submitting' the user to the game
+  - [Using a namespace in JS](https://stackoverflow.com/questions/6928926/what-advantages-are-gained-by-using-namespaces-in-javascript) - To help miinimise variables in the global scope. 
 
 
 - ### Acknowledgments 
