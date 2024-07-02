@@ -155,35 +155,34 @@ of a modal making it re-usable.
 
 ## Bugs
 - Bug: The footer, when resizing the screen was overlapping onto the main element. 
-_Solution: Add a display: flex to the body and align the header, main & footer elements using flex-direction: column._
-![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
+  - _Solution: Add a display: flex to the body and align the header, main & footer elements using flex-direction: column._
+  - ![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
 
 - Bug: The card flip functionlaity made a weird transition when turning. 
-_Solution: Add the perspective property to the game-area with a value of 1000px_ 
+  - _Solution: Add the perspective property to the game-area with a value of 1000px_ 
 
 - Bug: When the initial first card was flipped it could still be selected which invoked the flipCard() function. 
-![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
-_Solution: Add a JS variable called firstCard which is initially set to null. Once the first card is selected and flipped, using 'this' the first card is saved to that variable. FlipCard() then checks if the firstCard variable is clicked, if so it returns out of the function. The same functionality was added for a secondCard variable._
+  - _Solution: Add a JS variable called firstCard which is initially set to null. Once the first card is selected and flipped, using 'this' the first card is saved to that variable. FlipCard() then checks if the firstCard variable is clicked, if so it returns out of the function. The same functionality was added for a secondCard variable._
+  - ![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
+
 
 - Bug: A user is able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
-- _Solution: In the flipCard() function, a lockFlip variable was added which didnt allow any other cards to be pressed until checkCardsMatch()finished._
-
-![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
+  - _Solution: In the flipCard() function, a lockFlip variable was added which didnt allow any other cards to be pressed until checkCardsMatch()finished._
+  - ![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
 
 - Bug: Cards could still be clicked when they were flipped and a matching pair. The EventListener was still attached. 
-- _Solution: When a pair is found we call a function to remove the EventListerner from those cards._
+  - _Solution: When a pair is found we call a function to remove the EventListerner from those cards._
 
 - Bug: When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
-- _Solution: Use cloneNode() when appending. Not using this meant I was adding the same element multiple times just moving down in the DOM._
+  - _Solution: Use cloneNode() when appending. Not using this meant I was adding the same element multiple times just moving down in the DOM._
 
 - Bug: A card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
-- _Solution: CSS class was only declared as '.flip' instead of '.card.flip.' Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active._
-
-![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
-![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
+  - _Solution: CSS class was only declared as '.flip' instead of '.card.flip.' Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active._
+  - ![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
+  - ![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
 
 - Bug: Global variables used in the flipCard() function are needed in the global scope to keep track of the logic. 
-- _Solution: In order to minimize the varibales in the Global Scope a namespace object was used to declare a number of variables in the global scope_
+  - _Solution: In order to minimize the varibales in the Global Scope a namespace object was used to declare a number of variables in the global scope_
 
 
 ## Credits
