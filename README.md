@@ -18,16 +18,16 @@ The main colours of the site (#009f6b, #009966) are different shades of green. U
 on a golf course. the accent colours (#163B7C) mimic the colour used by PGA. It elicits a familiar, nostalgic feeling 
  used by the already exisitng brand PGA.  
 
- [Link to Design Ideas PDF](documentation/design/pdf/PGA%20Score%20-%20Design%20Ideas.pdf)
+ [Link to Design Ideas PDF](documentation/design/PGA%20Score%20-%20Design%20Ideas.pdf)
 
 - ### Imagery
 The main logo is a play on the PGA Tour logo. It was traced from the original PGA Tour logo and tour was replaced with the word
 score. This was done using the Freeform app for MacOS. The imagery used on the back of the playing cards is the same image of a 
 golfer used by the PGA. The front face of the cards is images of golfers who play on the PGA Tour. 
 
-[Link to Card Design PDF](documentation/design/pdf/PGA%20Score%20-%20Card.pdf)
+[Link to Card Design PDF](documentation/design/PGA%20Score%20-%20Card.pdf)
 
-[Link to Logo Design PDF](documentation/design/pdf/PGA%20Score%20-%20Logo.pdf)
+[Link to Logo Design PDF](documentation/design/PGA%20Score%20-%20Logo.pdf)
 
 - ### Typography 
 Google Font was used to choose the font for this website. The font used for the site is [Raleway](https://fonts.google.com/specimen/Raleway) for
@@ -37,12 +37,12 @@ no other reason than I thought it looked nice. It serves as both the H and p ele
 - ### Wireframes
 Prototypes for the website were designed using Freeform. 
 
-[Link to the Webpages PDF](documentation/design/pdf/PGA%20Score%20-%20Web%20Page%20Mockup.pdf)
+[Link to the Webpages PDF](documentation/design/PGA%20Score%20-%20Web%20Page%20Mockup.pdf)
 
 - ### Workflow
 The initial workflow for the website was also created using Freeform.
 
-[Link to the Webpages PDF](documentation/design/pdf/PGA%20Score%20-%20Workflow.pdf)
+[Link to the Webpages PDF](documentation/design/PGA%20Score%20-%20Workflow.pdf)
 
 
 ## Target Audience
