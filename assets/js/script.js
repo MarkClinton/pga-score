@@ -78,7 +78,7 @@ function showGameEndModal() {
 
 function showUsersNameInput(value) {
     let nameInput = document.getElementById("name");
-    value ? nameInput.value = USERS_NAME : nameInput.value = "";
+    return value ? nameInput.value = USERS_NAME : nameInput.value = "";
 }
 
 /**
