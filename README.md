@@ -5,7 +5,7 @@ Live: https://markclinton.github.io/pga-score/
 
 ## About
 PGA Score is a golf themed Javascript web game. The game itself is based upon the classic card memory game. A user must 
-click a card, whoch is face down, and click another card to find the corresponding match. If they dont find a match, both
+click a card, which is face down, and click another card to find the corresponding match. If they don't find a match, both
 cards flip back over. If they do find a match, the cards remain flipped. The game is only over when all cards are flipped. 
 The underlying game itself is simple, the theme of golf is to give the game a fun aspect. 
 
@@ -16,7 +16,7 @@ the colours used by the PGA website. PDF can be seen here for more details on th
 - ### Colour Scheme 
 The main colours of the site (#009f6b, #009966) are different shades of green. Used to represent the different shades found
 on a golf course. the accent colours (#163B7C) mimic the colour used by PGA. It elicits a familiar, nostalgic feeling 
- used by the already exisitng brand PGA.  
+ used by the already existing brand PGA.  
 
  [Link to Design Ideas PDF](documentation/design/PGA%20Score%20-%20Design%20Ideas.pdf)
 
@@ -46,14 +46,14 @@ The initial workflow for the website was also created using Freeform.
 
 
 ## Target Audience
-The target audience would be anyone who like to play web based games and has an interest in golf. The idea behind this game
-would that it wouldnt look out of place in a list on one of those old flash based game websites.
+The target audience would be anyone who likes to play web based games and has an interest in golf. The idea behind this game
+is that it wouldnt look out on an old flash based game websites.
 
 ## Features
 
 - ### Two Game Modes
-  - User has a choice of two game modes. Easy or Hard. Easy consists of 8 cards displayed on the game area. Hard consists
-  of 12 cards displayed on the game area.
+  - User has a choice of two game modes. Easy or Hard. Easy consists of 8 cards displayed in the game area. Hard consists
+  of 12 cards displayed in the game area.
 
     <details><summary>Game Modes</summary> 
 
@@ -62,7 +62,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
     </details>
 
 - ### User Name 
-  - User can enter their name which will be displayed above the game area.
+  - A user can enter their name which will be displayed above the game area.
 
     <details><summary>User Name</summary> 
 
@@ -71,9 +71,9 @@ would that it wouldnt look out of place in a list on one of those old flash base
     </details>
 
 - ### Card Shuffle 
-  - Cards are placed on the game area at random. The game area utilises flex box and the cards are given an order. The 
-  order us calculated using a random number between 1 and the number of cards on display. The user will get unique 
-  placement of cards everytime they play. 
+  - Cards are placed in the game area at random. The game area utilises flex box and the cards are given an order. The 
+  order is calculated using a random number between 1 and the number of cards on display. The user will get unique 
+  placement of cards every time they play. 
 
     <details><summary>Card Shuffle</summary> 
 
@@ -94,7 +94,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
 - ### Game Flow 
 
   - #### Two Card Selection
-    - Only 2 cards can be selected and flipped at any given time on the game area. 
+    - Only 2 cards can be selected and flipped at any given time in the game area. 
 
     <details><summary>Two Card Selection</summary> 
 
@@ -130,7 +130,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
     </details>
 
 - ### Save Users Name on Restart
-  - The users name will be saved into the text input if they choose to restart a game.
+  - The user's name will be saved into the text input if they choose to restart a game.
 
     <details><summary>Save Users Name on Restart</summary> 
 
@@ -148,7 +148,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
     </details>
 
 - ### Responsive Design
-  - The game is playable on mobile but we reccomend using a bigger screen for the best experience. 
+  - The game is playable on mobile but we recommend using a bigger screen for the best experience. 
 
     <details><summary>Responsive Design</summary> 
 
@@ -157,28 +157,28 @@ would that it wouldnt look out of place in a list on one of those old flash base
     </details>
 
 ### Future Features
-1. A timer. A timer starts when the game are is populated with cards and records the time taken for a user to match all cards. 
-I intially wrote this into the spec before starting the project but never got the time to try and implement it. The idea would
-be that, depending on the time, a user would be a given a score based on a handicap, just like in golf. It would have been done
+1. A timer. A timer starts when the game area is populated with cards and records the time taken for a user to match all cards. 
+I initially wrote this into the spec before starting the project but never got the time to try and implement it. The idea would
+be that, depending on the time, a user would be given a score based on a handicap, just like in golf. It would have been done
 in groups i.e. if the user gets a time of 15-20 seconds they would get a handicap of -1. 20-25s would get a handicap of par.
-2. Another Game Mode. Currently there is Easy or Hard and determines the amount of cards to be shown on the game area. Hard 
+2. Another Game Mode. Currently there is Easy or Hard and determines the amount of cards to be shown in the game area. Hard 
 would be renamed to Medium and a new game mode introduced as Hard. The new Hard game mode would consist of half the cards 
 being images of golfers and the other half being text. The text would be the last time they won a PGA Championship. The 
 player would have to match the image to the last time that golfer won a PGA Championship.
 3. Implement more cards. Implement functionality to have a big list of cards created that the game would choose from depending
-on the game mode chosen. This would mean that we could have a mix of different cards that could be displayed so a user doesnt
+on the game mode chosen. This would mean that we could have a mix of different cards that could be displayed so a user doesn't
 see the same cards every time they play. 
 4. Dynamic Modal. Currently the game is using two separate modals defined on index.html. One that popups when the user starts
-a game. One that pop ups when a user finishes a game. Having a dynamoc modal could mean only defining one modal on index.html
+a game. One that pop ups when a user finishes a game. Having a dynamic modal could mean only defining one modal on index.html
 and populating it with elements using javascript, depending on the need for the content. Javascript could handle the content
-of a modal making it re-usable. 
+of a modal making it reusable. 
 
 ## Technologies
 
 ### Languages
 - HTML - Provide the structure of the webpage. 
 - CSS - Used in conjunction with HTML for styling elements. 
-- JavaScript - Provides the logic of the application. Allowing the end user the interact with the webpage. 
+- JavaScript - Provides the logic of the application. Allowing the end user to interact with the webpage. 
 
 ### Other Tools
 - [GitHub](https://github.com/) to host the repository
@@ -235,7 +235,7 @@ of a modal making it re-usable.
 |Logo|Click Logo|Brings back to Home page| Pass |
 |GitHub Logo|Click Logo|Go to repo| Pass |
 |Click Start New Game Button|Click|Modal Pops up to start game| Pass |
-|Form|Enter Name Input|Doesnt accept only spaces or blank input. min 3 characters, max 15 charactors| Pass |
+|Form|Enter Name Input|Doesn't accept only spaces or blank input. min 3 characters, max 15 characters| Pass |
 ||Enter Course Input|Option must be selected| Pass |
 ||Click Start Game Button|Starts the game and shows the populated game area| Pass |
 |Cards|Click First Card|Flips to show reverse| Pass |
@@ -263,30 +263,30 @@ of a modal making it re-usable.
   - _Solution: Add a display: flex to the body and align the header, main & footer elements using flex-direction: column._
   - ![Side Navigation Issue](documentation/bug_images/side_navigation_issue.png)
 
-- Bug: The card flip functionlaity made a weird transition when turning. 
+- Bug: The card flip functionality made a weird transition when turning. 
   - _Solution: Add the perspective property to the game-area with a value of 1000px_ 
 
 - Bug: When the initial first card was flipped it could still be selected which invoked the flipCard() function. 
   - _Solution: Add a JS variable called firstCard which is initially set to null. Once the first card is selected and flipped, using 'this' the first card is saved to that variable. FlipCard() then checks if the firstCard variable is clicked, if so it returns out of the function. The same functionality was added for a secondCard variable._
   - ![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
 
-- Bug: A user is able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
-  - _Solution: In the flipCard() function, a lockFlip variable was added which didnt allow any other cards to be pressed until checkCardsMatch()finished._
+- Bug: A user is able to click as many cards as they wanted, it wasn't limited to 2 cards. This messed with the flow of the game.
+  - _Solution: In the flipCard() function, a lockFlip variable was added which didn't allow any other cards to be pressed until checkCardsMatch()finished._
   - ![No lockCardFlip variable](documentation/bug_images/no_lock_card_flip.gif)
 
 - Bug: Cards could still be clicked when they were flipped and a matching pair. The EventListener was still attached. 
-  - _Solution: When a pair is found we call a function to remove the EventListerner from those cards._
+  - _Solution: When a pair is found we call a function to remove the EventListener from those cards._
 
 - Bug: When dynamically adding cards to the game area in a loop it would only ever add the last element to the game area. 
   - _Solution: Use cloneNode() when appending. Not using this meant I was adding the same element multiple times just moving down in the DOM._
 
-- Bug: A card was still flipping when the eventListener was removed. It wasnt fully flipping over as shown in the gif below. 
+- Bug: A card was still flipping when the eventListener was removed. It wasn't fully flipping over as shown in the gif below. 
   - _Solution: CSS class was only declared as '.flip' instead of '.card.flip.' Which meant that the 'card:active' class was enabled to carry out the transform property when the card was active._
   - ![Wrong Class Issue Image](documentation/bug_images/wrong_class_issue.png)
   - ![Wrong Class Issue GIF](documentation/bug_images/wrong_class_issue.gif)
 
 - Bug: Global variables used in the flipCard() function are needed in the global scope to keep track of the logic. 
-  - _Solution: In order to minimize the varibales in the Global Scope a namespace object was used to declare a number of variables in the global scope_
+  - _Solution: In order to minimise the variables in the Global Scope a namespace object was used to declare a number of variables in the global scope_
 
 
 ## Credits
@@ -310,7 +310,7 @@ of a modal making it re-usable.
 
 - ### Helpful Links
 
-  - [How to flip a card](https://www.w3schools.com/howto/howto_css_flip_card.asp) - To help get the inital functionlaity off the ground
+  - [How to flip a card](https://www.w3schools.com/howto/howto_css_flip_card.asp) - To help get the initial functionality off the ground
   - [Display an image from an array in JS](https://www.geeksforgeeks.org/how-to-display-images-from-an-array-in-javascript/) - To help with dynamically adding images to the DOM
   - [Adding elements in a loop to dom](https://stackoverflow.com/questions/69445670/javascript-for-loop-appends-same-element-once) - Also to help with dynamically adding images to the DOM
   - [Set the source of an image in JS](https://stackoverflow.com/questions/1232793/javascript-set-img-src) - How to set the source of an image in JavaScript
@@ -321,7 +321,7 @@ of a modal making it re-usable.
   - [Shift() function JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) - How to remove the first element of an array and save it to a variable
   - [Check if all elements have the same class](https://www.geeksforgeeks.org/how-to-find-whether-all-element-contains-same-class-or-not/) - Helped to find out when all cards matched to display game end modal.
   - [Access form data through event property](https://stackoverflow.com/questions/72982035/can-you-access-a-html-form-data-from-the-event-property-or-a-this-keyword-in) - To help gather form data before 'submitting' the user to the game
-  - [Using a namespace in JS](https://stackoverflow.com/questions/6928926/what-advantages-are-gained-by-using-namespaces-in-javascript) - To help miinimise variables in the global scope. 
+  - [Using a namespace in JS](https://stackoverflow.com/questions/6928926/what-advantages-are-gained-by-using-namespaces-in-javascript) - To help minimise variables in the global scope. 
 
 
 - ### Acknowledgments 
