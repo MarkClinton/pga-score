@@ -231,6 +231,9 @@ of a modal making it re-usable.
 - ### Manual Testing 
 
 - ### Compatibility Testing
+  - Chrome Desktop Version 126.0.6478.127 
+  - Safari Desktop Version 17.5 (19618.2.12.11.6)
+  - iPhone XR iOS 17.5.1 Safari App
 
 ## Bugs
 - Bug: The footer, when resizing the screen was overlapping onto the main element. 
@@ -243,7 +246,6 @@ of a modal making it re-usable.
 - Bug: When the initial first card was flipped it could still be selected which invoked the flipCard() function. 
   - _Solution: Add a JS variable called firstCard which is initially set to null. Once the first card is selected and flipped, using 'this' the first card is saved to that variable. FlipCard() then checks if the firstCard variable is clicked, if so it returns out of the function. The same functionality was added for a secondCard variable._
   - ![No firstCard variable](documentation/bug_images/no_firstCard_variable.gif)
-
 
 - Bug: A user is able to click as many cards as they wanted, it wasnt limited to 2 cards. This messed with the flow of the game.
   - _Solution: In the flipCard() function, a lockFlip variable was added which didnt allow any other cards to be pressed until checkCardsMatch()finished._
@@ -267,15 +269,41 @@ of a modal making it re-usable.
 ## Credits
 
 - ### Resources
-
+  - [Favicon Generator. For real.](https://realfavicongenerator.net/) to generate free favicons.
+  - [Google Fonts](https://fonts.google.com/) for a range of free fonts. 
+  - [Stack Overflow](https://stackoverflow.com/) for help answering questions
+  - [W3 Schools](https://www.w3schools.com/) for documentation and interactive help with html and css.
+  - [Freeform](https://en.wikipedia.org/wiki/Freeform_(Apple)) for design and creating documents.
+  - [EZGif](https://ezgif.com/maker) for creating gifs for the ReadMe
+  - [Cloud Convert](https://cloudconvert.com/) for converting images to .webp format.
+  - [Love Maths](https://github.com/MarkClinton/love-maths) the Love Maths project was a great resource which I used for JS logic.
+  - [Sporting M.C.](https://github.com/MarkClinton/sporting-mc) My PP1 Sporting M.C. was a good resource for HTML and CSS that was used. 
+  - [Memory Game - Vanilla JavaScript](https://marina-ferreira.github.io/tutorials/js/memory-game/) Used as an initial resource to conceptualise the logic needed.
+  - [Modern Javascript Tutorial](https://javascript.info/) Modern Javascript Tutorial helped explain aspects of Javascript
+  - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) MDN Web Docs had some great explanations of built in JS functions
 
 - ### Media
-
+  - [PGS Tour](https://www.pgatour.com/) for all images of golfers, inspiration for the logo and back of the card.
 
 - ### Helpful Links
 
+  - [How to flip a card](https://www.w3schools.com/howto/howto_css_flip_card.asp) 
+  - [Display an image from an array in JS](https://www.geeksforgeeks.org/how-to-display-images-from-an-array-in-javascript/)
+  - [Adding elements in a loop to dom](https://stackoverflow.com/questions/69445670/javascript-for-loop-appends-same-element-once)
+  - [Set the source of an image in JS](https://stackoverflow.com/questions/1232793/javascript-set-img-src)
+  - [Desktop-First Media Queries](https://joegalley.com/articles/mobile-first-vs-desktop-first-media-queries#:~:text=If%20you%20expect%20your%20desktop,template%20on%20progressively%20smaller%20screens)
+  - [Trim() function JS](https://stackoverflow.com/questions/8120983/trim-spaces-from-form-input)
+  - [Calc in CSS](https://www.w3schools.com/cssref/func_calc.php)
+  - [How To - CSS/JS Modal](https://www.w3schools.com/howto/howto_css_modals.asp)
+  - [Shift() function JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+  - [Check if all elements have the same class](https://www.geeksforgeeks.org/how-to-find-whether-all-element-contains-same-class-or-not/)
+  - [Access form data through event property](https://stackoverflow.com/questions/72982035/can-you-access-a-html-form-data-from-the-event-property-or-a-this-keyword-in)
+  - [Using a namespace in JS](https://stackoverflow.com/questions/6928926/what-advantages-are-gained-by-using-namespaces-in-javascript)
+
 
 - ### Acknowledgments 
+  - I would like to thank my mentor Juliia for her help and encouragement along the way with this project.
+  - My girlfriend Aoife for her patience and for making countless cups of tea to help me through this
 
 
 
