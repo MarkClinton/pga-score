@@ -30,6 +30,8 @@ golfer used by the PGA. The front face of the cards is images of golfers who pla
 [Link to Logo Design PDF](documentation/design/pdf/PGA%20Score%20-%20Logo.pdf)
 
 - ### Typography 
+Google Font was used to choose the font for this website. The font used for the site is [Raleway](https://fonts.google.com/specimen/Raleway) for
+no other reason than I thought it looked nice. It serves as both the H and p elements.
 
 
 - ### Wireframes
