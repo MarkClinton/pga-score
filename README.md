@@ -232,6 +232,26 @@ of a modal making it re-usable.
     - [style.css](documentation/testing_images/w3c_validator.png)
 
 - ### Manual Testing 
+|  Feature |  Action | Effect | Pass/Fail |
+|---|---|---|---|
+|Logo|Click Logo|Brings back to Home page| Pass |
+|GitHub Logo|Click Logo|Go to repo| Pass |
+|Click Start New Game Button|Click|Modal Pops up to start game| Pass |
+|Form|Enter Name Input|Doesnt accept only spaces or blank input. min 3 characters, max 15 charactors| Pass |
+||Enter Course Input|Option must be selected| Pass |
+||Click Start Game Button|Starts the game and shows the populated game area| Pass |
+|Cards|Click First Card|Flips to show reverse| Pass |
+||Click Second Card|Flips to show reverse, if match stay flipped| Pass |
+||Click Third Card|Not allowed if 2 are already flipped| Pass |
+||Click Matched Card|Should not flip again| Pass |
+||Click already flipped Card|Should not flip again| Pass |
+||All cards match|End game modal shows| Pass |
+|Modal|Click Close Button|Modal closes| Pass |
+||Click anywhere outside modal for new game|Modal closes| Pass |
+||Click Restart Game button|End game modal closes, new game modal appears| Pass |
+||Click Restart Game button|Users name should persist on restart| Pass |
+||Click Start New Game button|Users name should reset on new game| Pass |
+
 
 - ### Compatibility Testing
   - Chrome Desktop Version 126.0.6478.127 
