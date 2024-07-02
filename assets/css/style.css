@@ -373,3 +373,15 @@ footer {
         width: 60%;
     }
 }
+
+/* Media query: screens less than 540px */
+@media (max-width: 540px) {
+
+    .user-display {
+        width: 90%;
+    }
+
+    .game-area {
+        width: 90%;
+    }
+}
