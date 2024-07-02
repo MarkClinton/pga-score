@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
  * and sets its display to block.
  */
 function showModal() {
-    // Name input reset is handled by keepUsersName()
+    // Name input reset is handled by showUsersNameInput()
     // Reset the course input
     document.getElementById("course").value = "";
 
@@ -46,7 +46,7 @@ function showModal() {
     // Defined here as the modal is displayed.
     window.onclick = function (event) {
         if (event.target === modal) {
-            keepUsersName(false);
+            showUsersNameInput(false);
             modal.classList.remove("show");
         }
     };
@@ -64,7 +64,7 @@ function closeModal() {
     startModal.classList.remove("show");
     endModal.classList.remove("show");
     // Reset the name input to blank when modal closes
-    keepUsersName(false);
+    showUsersNameInput(false);
 }
 
 /**
@@ -76,7 +76,7 @@ function showGameEndModal() {
     modal.classList.add("show");
 }
 
-function keepUsersName(value) {
+function showUsersNameInput(value) {
     let nameInput = document.getElementById("name");
     value ? nameInput.value = USERS_NAME : nameInput.value = "";
 }
@@ -122,7 +122,7 @@ function setUserDisplayName(user) {
 
 function restartGame() {
     closeModal();
-    keepUsersName(true);
+    showUsersNameInput(true);
     showModal();
 }
 
