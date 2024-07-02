@@ -8,6 +8,8 @@ let CARD_IDENTIFIERS = {
     secondCard: null
 };
 
+let USERS_NAME = null;
+
 /**
  * Wait for the DOM to finish loading before running the game.
  * get the button element and add eventListeners to it.
@@ -33,8 +35,7 @@ window.addEventListener('load', function () {
  * and sets its display to block.
  */
 function showModal() {
-    // Reset the name input
-    document.getElementById("name").value = "";
+    // Name input reset is handled by keepUsersName()
     // Reset the course input
     document.getElementById("course").value = "";
 
@@ -45,13 +46,14 @@ function showModal() {
     // Defined here as the modal is displayed.
     window.onclick = function (event) {
         if (event.target === modal) {
+            keepUsersName(false);
             modal.classList.remove("show");
         }
     };
 }
 
 /**
- * This function finds both popup modals by ID and sets their display to none.
+ * This function finds both popup modals by ID and removes the class 'show'.
  */
 function closeModal() {
     // Tried using 'this' to grab the outermost parent and use the div to close
@@ -61,6 +63,8 @@ function closeModal() {
     const endModal = document.getElementById("gameEndModal");
     startModal.classList.remove("show");
     endModal.classList.remove("show");
+    // Reset the name input to blank when modal closes
+    keepUsersName(false);
 }
 
 /**
@@ -70,6 +74,11 @@ function closeModal() {
 function showGameEndModal() {
     const modal = document.getElementById("gameEndModal");
     modal.classList.add("show");
+}
+
+function keepUsersName(value) {
+    let nameInput = document.getElementById("name");
+    value ? nameInput.value = USERS_NAME : nameInput.value = "";
 }
 
 /**
@@ -82,6 +91,7 @@ function submitGameDetails(event) {
 
     const user = this.name.value.trim();
     const gameMode = parseInt(this.course.value);
+    USERS_NAME = user;
 
     if (user) {
         //Update the input with the trimmed value
@@ -91,7 +101,7 @@ function submitGameDetails(event) {
         alert("Please enter valid input");
         this.name.focus();
         this.name.value = "";
-        return false;
+        return;
     }
 
     clearGameArea();
@@ -112,6 +122,7 @@ function setUserDisplayName(user) {
 
 function restartGame() {
     closeModal();
+    keepUsersName(true);
     showModal();
 }
 

@@ -89,6 +89,10 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
 - ### End Game Notification
 
+- ### Save Users Name on Restart
+
+- ### Information Section When Game Is Won
+
 - ### Immersive Theme
 
 - ### Responsive Design
