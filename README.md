@@ -57,7 +57,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
     <details><summary>Game Modes</summary> 
 
-    <p align="center"><img src="" alt="drawing" width="600"/></p>
+    <p align="left"><img src="documentation/site_images/features/game_modes.png" alt="drawing" width="600"/></p>
 
     </details>
 
@@ -66,7 +66,7 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
     <details><summary>User Name</summary> 
 
-    <p align="center"><img src="" alt="drawing" width="600"/></p>
+    <p align="left"><img src="documentation/site_images/features/display_name.png" alt="drawing" width="600"/></p>
 
     </details>
 
@@ -77,27 +77,86 @@ would that it wouldnt look out of place in a list on one of those old flash base
 
     <details><summary>Card Shuffle</summary> 
 
-    <p align="center"><img src="" alt="drawing" width="600"/></p>
+    <p align="left"><img src="documentation/site_images/features/game_1.png" alt="drawing" width="600"/></p>
+    <p align="left"><img src="documentation/site_images/features/game_2.png" alt="drawing" width="600"/></p>
 
     </details>
 
 - ### Restart Game Option
+  - The user has the option to restart a game when they match all cards. It directly brings them to the new game popup modal. 
+
+    <details><summary>Restart Game Option</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/restart_game.png" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Game Flow 
 
   - #### Two Card Selection
+    - Only 2 cards can be selected and flipped at any given time on the game area. 
+
+    <details><summary>Two Card Selection</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/two_card_control.gif" alt="drawing" width="600"/></p>
+
+    </details>
+
   - #### Matched Card Control 
+    - When 2 cards are matched, clicking them will not flip them. They become inactive.  
+
+    <details><summary>Matched Card Control</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/matched_card_control.gif" alt="drawing" width="600"/></p>
+
+    </details>
+
   - #### Non Matched Card Control
+    - When 2 cards are clicked but do not match, they will flip back over.  
+
+    <details><summary>Non Matched Card Control</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/two_card_control.gif" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### End Game Notification
+  - The user will get a pop up modal when they complete the game saying congratulations. 
+
+    <details><summary>End Game Notification</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/restart_game.png" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Save Users Name on Restart
+  - The users name will be saved into the text input if they choose to restart a game.
+
+    <details><summary>Save Users Name on Restart</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/save_name_on_restart.gif" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Information Section When Game Is Won
 
 - ### Immersive Theme
+  - The theme takes elements from already existing media such as PGA Tour and builds upon it to give a sense of familiarity.
+
+    <details><summary>Immersive Theme</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/immersive_theme.png" alt="drawing" width="600"/></p>
+
+    </details>
 
 - ### Responsive Design
+  - The game is playable on mobile but we reccomend using a bigger screen for the best experience. 
+
+    <details><summary>Responsive Design</summary> 
+
+    <p align="left"><img src="documentation/site_images/features/responsive_design.gif" alt="drawing" width="600"/></p>
+
+    </details>
 
 ### Future Features
 1. A timer. A timer starts when the game are is populated with cards and records the time taken for a user to match all cards. 
